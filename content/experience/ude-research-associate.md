@@ -11,6 +11,7 @@ tags: [research, academia, mobile, software-engineering]
 ## de
 
 07/2010 – 01/2014
+
 :   **Wissenschaftlicher Mitarbeiter** — paluno / Universität Duisburg-Essen, Essen
 
     Lehrstuhl für Software Engineering – insbesondere für mobile Systeme.
@@ -18,6 +19,7 @@ tags: [research, academia, mobile, software-engineering]
 ## en
 
 07/2010 – 01/2014
+
 :   **Research Associate** — paluno / University of Duisburg-Essen, Essen
 
     Chair for Software Engineering, especially mobile systems.

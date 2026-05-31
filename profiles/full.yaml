@@ -1,11 +1,15 @@
-# Full CV — English
 name: Dr. Tobias Griebe
-subtitle: "Engineering Director · IT Department Head"
-contact: "Goethestraße 10 · 15345 Eggersdorf · +49 159 06303187 · griebe.tobias@gmail.com"
+subtitle:
+  de: "Engineering Director · IT-Abteilungsleitung · Platform Engineering"
+  en: "Engineering Director · IT Department Head · Platform Engineering"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
 photo: portrait2.jpg
-lang: en
+template: cv.html
 
 sections:
+  - summary
+  - core-competencies
+  - executive-competencies
   - experience:
       include: all
   - education:
@@ -20,6 +24,7 @@ sections:
         - technologies-cloud
         - technologies-backend
         - technologies-mobile
+        - product-management
         - languages
   - certifications
   - projects:
@@ -48,4 +53,6 @@ sections:
         - format
         - moria
         - mobco
+  - teaching
+  - publications
   - zivildienst

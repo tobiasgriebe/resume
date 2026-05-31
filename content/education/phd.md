@@ -9,6 +9,7 @@ tags: [phd, research, mobile, software-engineering]
 ## de
 
 04/2017
+
 :   **Promotion Dr. rer. nat.** — *summa cum laude*
 
     „Methode und Technologie zur modellbasierten Automatisierung von Tests kontextsensitiver mobiler Anwendungen"
@@ -16,6 +17,7 @@ tags: [phd, research, mobile, software-engineering]
 ## en
 
 04/2017
+
 :   **Doctorate Dr. rer. nat. / PhD** — *summa cum laude*
 
     "Method and Technology for Model-based Automation of Software Tests for Context-Aware Mobile Applications"

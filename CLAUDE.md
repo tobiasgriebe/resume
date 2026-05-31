@@ -4,63 +4,105 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Context
 
-This is a LaTeX-based CV/resume system for Dr. Tobias Griebe. It is not a software development repository. The primary output is `lebenslauf.pdf` (German) compiled from modular `.tex` source files.
+CV/resume system for Dr. Tobias Griebe. Content lives in modular Markdown files under `content/`. Build pipeline: `build.py` assembles selected content blocks, renders to HTML via pandoc, then prints to PDF via Chrome headless. No LaTeX.
 
 ## Build Commands
 
 ```bash
-# Compile the CV to PDF
-pdflatex lebenslauf.tex
+# Build a specific profile (produces .html + .pdf)
+python3 build.py profiles/engineering-director-de.yaml
 
-# Or with latexmk (handles multiple passes automatically)
-latexmk -pdf lebenslauf.tex
+# HTML preview only (fast, no Chrome)
+python3 build.py profiles/engineering-director-de.yaml --html-only
 
-# Clean auxiliary files
-latexmk -c
+# Custom output path
+python3 build.py profiles/engineering-director-de.yaml output.pdf
 ```
+
+**Available profiles** (`profiles/`):
+- `engineering-director-de.yaml` — focused DE CV, current role
+- `engineering-director-en.yaml` — focused EN CV, current role
+- `default-de.yaml` — full DE CV with all experience and projects
+- `default-en.yaml` — full EN CV
 
 ## Architecture
 
-The system uses a single master file (`lebenslauf.tex`) that controls everything via LaTeX boolean flags. Each section is a standalone `.tex` file included conditionally.
+### Content (`content/`)
+All source content in Markdown with YAML frontmatter. Each file has a `## de` and `## en` section.
 
-**Master file**: `lebenslauf.tex`
-- Declares all boolean flags (e.g., `\newboolean{showBeruf}`)
-- Sets their values in one central block (lines ~69–106)
-- Includes section files using `\ifaufEnglisch ... \else ... \fi` for language branching
+```
+content/
+  personal.md                  — contact info
+  certifications.md            — certifications
+  publications.md              — peer-reviewed publications
+  teaching.md                  — university teaching
+  zivildienst.md               — community service
+  experience/                  — one file per role (sorted by start: date)
+    cloudfactory-head-of-consulting.md
+    sevdesk-director.md
+    wuerth-head-of-dev.md
+    ...
+  education/
+    phd.md
+    diplom.md
+    school.md
+  skills/
+    leadership.md
+    engineering-management.md
+    agile-methods.md
+    technologies-cloud.md
+    technologies-backend.md
+    technologies-mobile.md
+    languages.md
+  projects/                    — one file per project
+    bofrost-mobile-pos.md
+    ambista.md
+    ...
+```
 
-**Language switching**: Set `\setboolean{aufEnglisch}{true}` in `lebenslauf.tex` to switch the entire CV to English. Each section has a German (`beruf.tex`) and English (`beruf-engl.tex`) variant.
+### Profiles (`profiles/`)
+YAML files that select which content blocks to include and in which language.
 
-**Section files** (each begins with `%!TEX root = lebenslauf.tex`):
-- `person.tex` / `person-engl.tex` — personal contact info
-- `beruf.tex` / `beruf-engl.tex` — work experience
-- `studium.tex` / `studium-engl.tex` — education
-- `kenntnisse.tex` / `kenntnisse-engl.tex` — skills/competencies
-- `zertifikate.tex` / `zertifikate-engl.tex` — certifications
-- `projekte.tex` / `projekte-engl.tex` — project list (includes individual project files conditionally)
-- Individual project files: `bofrost.tex`, `uxitergo.tex`, `ambista.tex`, etc.
+```yaml
+name: Dr. Tobias Griebe
+subtitle: "Engineering Director · IT-Abteilungsleitung"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait.png
+lang: de         # de or en
 
-**Photo**: Controlled by `\setboolean{mitFoto}{true/false}`; uses `portrait_small.pdf`.
+sections:
+  - experience:
+      include:
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include: [phd, diplom]
+  - skills:
+      include: all
+  - certifications
+  - projects:
+      include: [bofrost-mobile-pos, ambista]
+```
 
-**Subdirectories**:
-- `bvv/` — application package for BVV Insurance position (PDFs only, no editable source)
+Sections with `include: all` auto-sort by `start:` date descending.
+
+### Template (`templates/cv.html`)
+Pandoc HTML5 template. Uses variables: `$title$`, `$subtitle$`, `$contact$`, `$photo$`, `$lang$`, `$body$`.
+
+## Adding Content
+
+**New experience entry**: create `content/experience/<id>.md` with `type: experience`, `start:`, `end:` frontmatter and `## de` / `## en` sections. Add the id to any profiles that should include it.
+
+**New project**: create `content/projects/<id>.md` and add the id to profile `projects.include` lists.
+
+**New profile**: copy an existing profile YAML and adjust `sections`, `lang`, `name`, `subtitle`.
+
+## Key Reference File
+
+`experiences.txt` — unstructured notes on accomplishments at sevDesk and Würth Cloud Services, used as a drafting source.
+
+## Subdirectories
+
+- `bvv/` — application package for BVV Insurance (PDFs + HTML, no editable source)
 - `Bewerbungen/` — compiled application documents for various positions
 - `Dokumente/` — reference documents (certificates, employment references)
-
-## Tailoring the CV
-
-To include or exclude a section, flip its boolean in `lebenslauf.tex`:
-```latex
-\setboolean{showPublikationen}{true}  % show publications
-\setboolean{showLehre}{false}         % hide teaching experience
-```
-
-Individual projects can be toggled independently:
-```latex
-\setboolean{showProjektUXITERGO}{false}
-```
-
-To add a new project: create a new `.tex` file (follow the pattern of existing project files), add a boolean for it, and reference it in `projekte.tex`.
-
-## Key Content File
-
-`experiences.txt` — unstructured notes on accomplishments and bullet points at sevDesk and Würth Cloud Services, used as a source for drafting CV content.

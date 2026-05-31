@@ -10,6 +10,7 @@ tags: [computer-science, diploma]
 ## de
 
 06/2009
+
 :   **Diplom Informatik** — Universität Leipzig (10/2002 – 06/2009)
 
     Nebenfach Philosophie
@@ -19,6 +20,7 @@ tags: [computer-science, diploma]
 ## en
 
 06/2009
+
 :   **Diploma in Computer Science** — University of Leipzig (10/2002 – 06/2009)
 
     Minor: Philosophy

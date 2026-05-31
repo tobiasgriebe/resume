@@ -1,11 +1,11 @@
 # Vollständiger Lebenslauf — Deutsch
-# Entspricht der aktuellen lebenslauf.tex Konfiguration
-name: Lebenslauf Dr. Tobias Griebe
+name: Dr. Tobias Griebe
+subtitle: "Engineering Director · IT-Abteilungsleitung"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
 lang: de
-photo: portrait_small.pdf
 
 sections:
-  - personal
   - experience:
       include: all
   - education:
@@ -48,3 +48,4 @@ sections:
         - format
         - moria
         - mobco
+  - zivildienst

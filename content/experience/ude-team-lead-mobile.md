@@ -11,23 +11,27 @@ tags: [research, academia, mobile, team-lead, mentoring, consulting, project-man
 ## de
 
 01/2014 – 04/2016
+
 :   **Leiter Arbeitsgruppe Mobile Anwendungen & Prozesse** — paluno / Universität Duisburg-Essen, Essen
 
-    Lehrstuhl für Software Engineering – insbesondere für mobile Systeme.
+    **AUFGABEN & ERGEBNISSE**
 
-    - Eigenverantwortliche Themenentwicklung im Bereich mobile Anwendungen, Architekturen, Methoden und Werkzeuge
-    - Ergebnisverantwortliche Durchführung industrieorientierter Entwicklungs- und Beratungsprojekte zur Drittmittelerwirtschaftung
-    - Fachliche Führung und Mentoring von 6–7 Mitarbeitern im Projektgeschäft
-    - Methodisches und fachliches Coaching von wissenschaftlichen Mitarbeitern im Promotionsprozess
+    Eigenverantwortliche Leitung der Forschungsgruppe Mobile Anwendungen & Prozesse am Lehrstuhl für Software Engineering. Dr. Griebe trieb die Themenentwicklung im Bereich mobiler Anwendungsarchitekturen, Testautomatisierung und kontextsensitiver Systeme voran und führte industrieorientierte Entwicklungs- und Beratungsprojekte zur Drittmittelerwirtschaftung.
+
+    **FÜHRUNG & ORGANISATIONSENTWICKLUNG**
+
+    Fachliche Führung und Mentoring von 6–7 wissenschaftlichen Mitarbeitern im Projektgeschäft sowie methodisches Coaching von Doktoranden im Promotionsprozess. Dr. Griebe etablierte eine kollaborative Forschungskultur und steuerte den Wissenstransfer zwischen akademischen und industriellen Projektpartnern.
 
 ## en
 
 01/2014 – 04/2016
+
 :   **Team Lead Mobile Applications & Processes** — paluno / University of Duisburg-Essen, Essen
 
-    Chair for Software Engineering, especially mobile systems.
+    **RESPONSIBILITIES & RESULTS**
 
-    - Autonomous advancement of subject areas in mobile applications, architectures, methods, and tools
-    - Accountable acquisition and management of industrial development and consulting projects to generate external funding
-    - Functional leadership and mentoring of 6–7 team members in engineering and consulting projects
-    - Methodological and technical coaching of scientific staff through the PhD process
+    Autonomous leadership of the Mobile Applications & Processes research group at the Chair for Software Engineering. Dr. Griebe advanced subject development in mobile application architectures, test automation, and context-aware systems, and managed industry-oriented development and consulting projects to generate external funding.
+
+    **LEADERSHIP & ORGANISATIONAL DEVELOPMENT**
+
+    Functional leadership and mentoring of 6–7 research associates in project engagements as well as methodological coaching of doctoral candidates through the PhD process. Dr. Griebe established a collaborative research culture and managed knowledge transfer between academic and industrial project partners.

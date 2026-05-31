@@ -1,0 +1,28 @@
+name: Dr. Tobias Griebe
+subtitle:
+  de: "Engineering Director · IT-Abteilungsleitung"
+  en: "Engineering Director · IT Department Head"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+compact: true
+experience_compact: true
+
+section_label_overrides:
+  experience:
+    de: "Berufserfahrungs-Highlights"
+    en: "Career Highlights"
+
+sections:
+  - summary
+  - core-competencies-short
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+        - adesso-head-cc
+  - earlier-positions
+  - education:
+      include:
+        - phd

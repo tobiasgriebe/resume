@@ -1,0 +1,31 @@
+name: Dr. Tobias Griebe
+subtitle:
+  de: "Engineering Director · IT-Abteilungsleitung · Platform Engineering"
+  en: "Engineering Director · IT Department Head · Platform Engineering"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv-conservative.html
+
+sections:
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+        - durstexpress-lead-pm
+        - adesso-head-cc
+        - adesso-teamlead
+        - ude-team-lead-mobile
+  - education:
+      include:
+        - phd
+        - diplom
+  - skills:
+      include:
+        - leadership
+        - engineering-management
+        - agile-methods
+        - technologies-cloud
+        - technologies-backend
+        - languages
+  - certifications

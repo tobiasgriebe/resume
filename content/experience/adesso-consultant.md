@@ -11,9 +11,11 @@ tags: [consulting, mobile, digitalization]
 ## de
 
 04/2016 – 06/2016
+
 :   **Managing Consultant Digitalisierungsberatung** — adesso SE, Dortmund
 
 ## en
 
 04/2016 – 06/2016
+
 :   **Managing Consultant / IT Consulting** — adesso SE, Dortmund (Digitalization Strategy & Mobile Systems)
