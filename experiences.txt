@@ -1,0 +1,52 @@
+sevdesk
+- IT Governance
+	- Einführung und Durchsetzung der Verwendung von SAST tooling als teil des build-prozesses
+		- optional zur Qualitätsverbesserung und zum wissenaufbei bei entwickeln in der legacy code base im alten tech stack
+		- obligatorisch in der neuen microservice Systemlandschaft im neuen tech stack, spring boot, kotlin, Postgres, Kubernetes, was
+		- tooling: gitlab pipelines, GitHub actions, ci/cd pipelines
+	- Einführung von Governance Policies im Cloud Kontext
+		- zb. obligatorisches tagging von Kubernetes workloads zur nachverfolgbarkeit
+	- Festigung und Professionalisierung agiler Vorgehensmodelle in unterschiedlichen teams
+		- transition von scrum zu kanban als evolution parallel zur productevolution 
+	- direkte Linienführung von Führungskräften, konkret Engineering Manager
+- IT-Betriebs-Organisation 
+	- Einführung eins Rufbereitsschaftsprogrammes in mehreren Teams zur Sicherstellung 24/7 Reaktionsfähigkeit auf Incidents
+- Kommunikationsfähigkeit
+	- als Engineering Director habe ich direkt an den CTO berichtet
+	- regelmäßig Präsentation und Verteidigung größerer Transformationsvorhaben im C-Level und VP-Level
+	- regelmäßige und direkte Kooperation und Kollaboration mit VP Data, VP Product Management, Product Management Directors
+- Health Checks
+	- Systems Health
+		- Einführung von Observability Lösungen (Datadog, New Relic, Pager Duty)
+	- Cultural Health
+		- System zum kontinuierlichen Assessment der Team Health, Psychological Safety, etc in den Teams
+- Application Modernization
+	- System Transformationen
+		- Modernisierung, refactoring, de-coupling, monolith tear-down mehrerer interagierender PHP Anwendung im live-betrieb
+		- Mischbetrieb aus php legacy anwednung und moderner micro-service landschaft
+		- Architekturdokumentation mit Arc42
+	- Migration von on-premis in public cloud
+- KI/AI
+	- Couraged and fostered the adoption of AI tech as dev tools
+		- in alignment with CEO guidelines
+- System Transformationen
+	- courageous rewrite of mobile app 
+		- old tech stack and end of life cycle, unmaintainable, negative impacting DORA metrics
+		- needed to adapt to new backend and new pace of backend development
+
+Würth Cloud Service
+- Kommunikationsfähigkeit
+	- als de-facto CTO ständige direkte Zusammenarbeit mit dem CEO, Geschäftsfühung
+	- regelmäßig Präsentation und Verteidigung größerer Transformationsvorhaben im C-Level und VP-Level
+- Health Checks
+	- Systems Health
+		- Einführung von Observability Lösungen (Sentry)
+	- Cultural Health
+		- System zum kontinuierlichen Assessment der Team Health, Psychological Safety, etc in den Teams
+- Application Modernization
+	- Application Transformation
+		- Modernisierung, refactoring, de-coupling, monolith tear-down einer großen PHP Anwendung im live-betrieb
+		- Architekturdokumentation mit Arc42
+	- Migration von on-premis in private cloud
+- KI/AI
+	- early and careful adoption in safe areas

@@ -1,0 +1,177 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ngerman}
+\usepackage{makeidx}
+\usepackage{a4wide}
+\usepackage[latin1]{inputenc}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{ifthen}
+\usepackage{bibentry}\nobibliography*
+\usepackage{fancyhdr}
+	\fancyhf{}
+	 \renewcommand{\headrulewidth}{0pt}
+	 \renewcommand{\headrulewidth}{0pt}
+	 \fancyfoot[OR]{\thepage\  / \pageref{LastPage}}
+\linespread{1.2}
+\makeindex
+\addtolength{\voffset}{-30pt}
+\addtolength{\textheight}{60pt}
+%
+\newboolean{aufEnglisch}
+\newboolean{showProjects}
+	\newboolean{showroleinprojects}
+	\newboolean{showProjektUXITERGO}
+	\newboolean{showProjektScanAndPayZwei}
+	\newboolean{showProjektITSG}
+	\newboolean{showProjektScannenUeberweisungstraeger}
+	\newboolean{showProjektDKVITERGO}
+	\newboolean{showProjektMobileCampiOSITERGO}
+	\newboolean{showProjektDONG}
+	\newboolean{showProjektitergostudie}
+	\newboolean{showProjektsportimosten}
+	\newboolean{showProjektufo}
+	\newboolean{showProjektscanandpay}
+	\newboolean{showProjektmdr}
+	\newboolean{showProjektaoa}
+	\newboolean{showProjektformat}
+	\newboolean{showProjektmoria}
+	\newboolean{showProjektprobate}
+	\newboolean{showProjektmobco}
+\newboolean{showKenntnisse}
+	\newboolean{showKenntnisseSprachen}
+	\newboolean{showKenntnisseOS}
+	\newboolean{showKenntnissePlattformen}
+	\newboolean{showKenntnisseProgSpr}
+	\newboolean{showKenntnisseTech}
+\newboolean{showSchule}
+\newboolean{showZivildienst}
+\newboolean{showStudium}
+\newboolean{showLehre}
+	\newboolean{showLehreEssen}
+	\newboolean{showLehreLeipzig}
+\newboolean{showPublikationen}
+\newboolean{showBeruf}
+\newboolean{showstakeholders}
+%
+%
+%
+\setboolean{aufEnglisch}{false}
+\setboolean{showProjects}{true}
+	\setboolean{showProjektUXITERGO}{true}
+	\setboolean{showProjektScanAndPayZwei}{true}
+	\setboolean{showProjektITSG}{true}
+	\setboolean{showProjektScannenUeberweisungstraeger}{true}
+	\setboolean{showProjektDKVITERGO}{true}
+	\setboolean{showProjektMobileCampiOSITERGO}{true}
+	\setboolean{showProjektDONG}{true}
+	\setboolean{showProjektitergostudie}{true}
+	\setboolean{showroleinprojects}{true}
+	\setboolean{showProjektsportimosten}{true}
+	\setboolean{showProjektufo}{true}
+	\setboolean{showProjektscanandpay}{true}
+	\setboolean{showProjektmdr}{true}
+	\setboolean{showProjektaoa}{true}
+	\setboolean{showProjektformat}{true}
+	\setboolean{showProjektmobco}{true}
+	\setboolean{showProjektmoria}{true}
+	\setboolean{showProjektprobate}{true}
+\setboolean{showKenntnisse}{true}
+	\setboolean{showKenntnisseSprachen}{true}
+	\setboolean{showKenntnisseOS}{true}
+	\setboolean{showKenntnissePlattformen}{true}
+	\setboolean{showKenntnisseProgSpr}{true}
+	\setboolean{showKenntnisseTech}{true}
+\setboolean{showSchule}{true}
+\setboolean{showZivildienst}{true}
+\setboolean{showStudium}{true}
+\setboolean{showLehre}{true}
+	\setboolean{showLehreEssen}{true}
+	\setboolean{showLehreLeipzig}{true}
+\setboolean{showPublikationen}{true}
+\setboolean{showBeruf}{true}
+\setboolean{showstakeholders}{true}
+%
+%
+%
+\begin{document}
+\pagestyle{fancy} % fancy | empty
+\begin{wrapfigure}{R}{5cm}
+	\includegraphics[width=5cm]{tobias.eps}%tgr_passbild_01.png
+\end{wrapfigure}
+\ifaufEnglisch
+	\section*{Curriculum Vitae}
+\else
+	\section*{Lebenslauf}
+\fi
+%
+\ifaufEnglisch
+	\input{person-engl}
+\else
+	\input{person}
+\fi
+%
+\ifshowBeruf
+	\ifaufEnglisch
+		\input{beruf-engl}
+	\else
+		\input{beruf}
+	\fi
+\fi
+%
+\ifshowPublikationen
+	\ifaufEnglisch
+		\input{publikationen-engl}
+	\else
+		\input{publikationen}
+	\fi
+\fi
+%
+\ifshowLehre
+	\ifaufEnglisch
+		\input{lehre-engl}
+	\else
+		\input{lehre}
+	\fi
+\fi
+%
+\ifshowProjects
+	\ifaufEnglisch
+		\input{projekte-engl}
+	\else
+		\input{projekte}
+	\fi
+\fi
+%
+\ifshowStudium
+	\ifaufEnglisch
+		\input{studium-engl}
+	\else
+		\input{studium}
+	\fi
+\fi
+%
+\ifshowZivildienst
+	\ifaufEnglisch
+		\input{zivildienst-engl}
+	\else
+		\input{zivildienst}
+	\fi
+\fi
+%
+\ifshowSchule
+	\input{schule}
+\fi
+%
+\ifshowKenntnisse
+	\input{kenntnisse}
+\fi
+%
+%gez. Tobias Griebe, \today
+\bibliographystyle{alphadin}
+\nobibliography{publikationen}
+\end{document}

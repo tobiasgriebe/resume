@@ -1,0 +1,22 @@
+Sehr geehrte Damen und Herren,
+
+auf der Suche einer beruflichen Veränderung bin ich mit großem Interesse auf Ihre Stellenausschreibung Senior Solution Architect bei Daimler IT Research & Development am Standort Berlin gestoßen. 
+
+In meinen bisherigen Tätigkeiten als Competence Center Leiter bei der adesso AG im sowie zuvor als Mitarbeiter an der Universität Duisburg-Essen konnte ich meine Kompetenzen bei Konzeption und Entwicklung von digitalen Lösungen im gesamten Spektrum Anforderungsermittlung in frühen Projektphasen, Entwurf von Systemarchitekturen bis hin zum Projekmanagement während Implementierung, Qualitätssicherung und Inbetriebnahme unter Beweis stellen.
+
+Als Competence Center Leiter bei der adesso AG befasse ich mich mit Projekten im gesamten Handlungsfeld von Ideation, Identifikation digitalisierbarer Geschäftsprozesse, Analyse von Digitalisierungspotenzial existierender und neuer Fachanforderungen, Identifikation von Wert-, Aufwands- und Risikotreibern im Bereich Systemarchitekturen und deren Schnittstellen, Requirements Engineering, der Erstellung von Grob- und Feinspezifikationen, der Koordination, Durchführung und Begleitung von IT-Projekten in strategischen und operativen Rollen, Implementierung und Inbetriebnahme technischer Lösungen sowie mit der Steuerung interner und externer Entwicklungsdienstleister. Weiterhin verantworte ich den Aufbau und die Führung eines Teams von Beratern im Themenfeld Digitalisierung und digitale Transformation.
+
+Ich bediene mich hierbei aus einem umfangreichen Methodenbaukasten zur Identifikation und Konkretisierung von Digitalisierungspotenzial (u.a. Business Model Canvas, Stakeholder-Analyse, Touchpoint-Analyse, Customer Journey Mapping und Customer Safari, Interaction Room) sowie gängiger Modellierungssprachen und Werkzeuge zur Dokumentation und Analyse von Prozessen und Architekturen (z.B. BPMN, UML, arc42).
+
+Der sichere Umgang mit klassischen und agilen Vorgehensmodellen (Scrum / Kanban) gehören ebenso zu meinen Kompetenzen wie der Umgang mit State-of-the-Art Werkzeugen zur aktiven und passiven Begleitung von IT-Projekten (z.B. Jira, Confluence oder MS-TFS). 
+
+Im Rahmen der von mir verantworteten IT-Projekte setze ich meine fundierten Kenntnisse in den Bereichen Architektur von Softwaresystemen, Programmiersprachen, Technologien für mobile Softwaresysteme und Cloud-basierte Backend-Systeme täglich in der Praxis ein und bekleide regelmäßig Schlüsselrollen, beispielsweise Product Owner, Digital Solution Architect oder General-Architekt für komplexe Systemlandschaften. Zum Spektrum der hierbei eingesetzen Technologien gehören beispielsweise Micro Services, Java Spring Boot, Docker, Kubernetes, Google Cloud Platform, Message Bus / Pub-Sub-Systeme.
+
+Nun bin ich auf der Suche nach einem neuen Engagement in einem innovativen und dynamischen Umfeld und sehe den Herausforderungen des Senior Solution Architect bei Daimler IT Research & Development mit Spannung entgegen.
+
+Ich bin voraussichtlich ab Juli 2019 verfügbar.
+
+Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.
+
+Mit freundlichen Grüßen,
+Dr. Tobias Griebe

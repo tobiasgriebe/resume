@@ -1,0 +1,33 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.ps
+*.synctex.gz
+*.sb-*
+
+# pandoc build output
+_assembled.md
+
+# Profile-generated PDFs (named after profile stems)
+default-de.pdf
+default-en.pdf
+engineering-director-de.pdf
+engineering-director-en.pdf
+
+# Temporary test PDFs
+test-fix.pdf
+test-output.pdf
+test-output-de.pdf
+test_enum.pdf
+test_full.pdf
+test_wrapfig.pdf
+check_widths.pdf

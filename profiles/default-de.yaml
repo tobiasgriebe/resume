@@ -1,0 +1,50 @@
+# Vollständiger Lebenslauf — Deutsch
+# Entspricht der aktuellen lebenslauf.tex Konfiguration
+name: Lebenslauf Dr. Tobias Griebe
+lang: de
+photo: portrait_small.pdf
+
+sections:
+  - personal
+  - experience:
+      include: all
+  - education:
+      include:
+        - phd
+        - diplom
+  - skills:
+      include:
+        - leadership
+        - engineering-management
+        - agile-methods
+        - technologies-cloud
+        - technologies-backend
+        - technologies-mobile
+        - languages
+  - certifications
+  - projects:
+      include:
+        - bofrost-mobile-pos
+        - ambista
+        - uitrealisierung
+        - uitvorstudie
+        - symphony
+        - uxitergo
+        - scanandpay2
+        - itsg
+        - scannenueberweiser
+        - dkvitergo
+        - unionmeinefondswelt
+        - barmenialebenschecker
+        - mobilecamp-ios-itergo
+        - dong
+        - itergostudie
+        - sportimosten
+        - ufo
+        - scanandpay
+        - mdrjump
+        - aoa
+        - probateweb
+        - format
+        - moria
+        - mobco

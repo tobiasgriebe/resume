@@ -1,0 +1,18 @@
+Bewerbung als Head of Engineering (m/w/d) – remote & deutschlandweit
+
+Sehr geehrte Damen und Herren,
+
+die Ausschreibung der MD-IT GmbH hat mich sofort angesprochen — nicht wegen der Position, sondern wegen der Mission: eine Engineering-Organisation zu gestalten, die wirklich etwas bewegt. Genau das ist es, was mich antreibt.
+
+Als Engineering Director bei sevDesk habe ich zwei R&D-Säulen mit 6 Engineering Managern und über 40 Entwicklern verantwortet. Dabei habe ich gelernt, dass operative Schlagkraft nur entsteht, wenn drei Dinge zusammenkommen: eine Führungskultur psychologischer Sicherheit mit direktem Feedback, in der Eigenverantwortung wirklich gelebt wird; eine konsequente Wertstrom-Optimierung, messbar über DORA-Metriken; und der gezielte Einsatz von KI — von AI-Assisted Coding bis zu LLM-Workflows — zur nachweislichen Steigerung der Developer Velocity. Diese drei Schwerpunkte sind kein Zufall: Sie entsprechen exakt dem, was MD-IT sucht.
+
+Was mich besonders für diese Aufgabe qualifiziert, ist die direkte Passung auf ein zentrales Thema Ihrer Ausschreibung: Bei Würth Cloud Services habe ich individuell gewachsene Systemkomponenten in eine mandantenfähige Plattformarchitektur transformiert — mit heterogener Nutzerbasis, Konzern-Governance und Startup-Tempo gleichzeitig. Mein technisches Fundament in Java/Spring Boot, Kubernetes und CI/CD erlaubt mir dabei, diese Transformation nicht nur zu steuern, sondern technisch zu gestalten und als glaubwürdiger Gesprächspartner auf allen Ebenen — von Entwicklern bis zur Geschäftsführung — zu agieren.
+
+Die Gestaltungsfreiheit, Engineering-Kultur und KI-Strategie bei MD-IT maßgeblich zu prägen, ist für mich kein Bonus — es ist der Kern dieser Aufgabe. Und der gesellschaftliche Impact, den die Medizinischen Dienste täglich leisten, gibt dieser Arbeit eine Bedeutung, die weit über das Technische hinausgeht.
+
+Mein Gehaltswunsch beträgt 140.000 Euro brutto jährlich. Meinen frühestmöglichen Eintrittstermin sehe ich zum 01.07.2026, idealerweise nach Vereinbarung.
+
+Über ein erstes Gespräch freue ich mich sehr.
+
+Mit freundlichen Grüßen
+Dr. Tobias Griebe
