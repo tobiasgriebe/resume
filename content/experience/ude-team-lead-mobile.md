@@ -14,12 +14,10 @@ tags: [research, academia, mobile, team-lead, mentoring, consulting, project-man
 
 :   **Leiter Arbeitsgruppe Mobile Anwendungen & Prozesse** — paluno / Universität Duisburg-Essen, Essen
 
-    **AUFGABEN & ERGEBNISSE**
-
+    #### AUFGABEN & ERGEBNISSE
     Eigenverantwortliche Leitung der Forschungsgruppe Mobile Anwendungen & Prozesse am Lehrstuhl für Software Engineering. Dr. Griebe trieb die Themenentwicklung im Bereich mobiler Anwendungsarchitekturen, Testautomatisierung und kontextsensitiver Systeme voran und führte industrieorientierte Entwicklungs- und Beratungsprojekte zur Drittmittelerwirtschaftung.
 
-    **FÜHRUNG & ORGANISATIONSENTWICKLUNG**
-
+    #### FÜHRUNG & ORGANISATIONSENTWICKLUNG
     Fachliche Führung und Mentoring von 6–7 wissenschaftlichen Mitarbeitern im Projektgeschäft sowie methodisches Coaching von Doktoranden im Promotionsprozess. Dr. Griebe etablierte eine kollaborative Forschungskultur und steuerte den Wissenstransfer zwischen akademischen und industriellen Projektpartnern.
 
 ## en
@@ -28,10 +26,8 @@ tags: [research, academia, mobile, team-lead, mentoring, consulting, project-man
 
 :   **Team Lead Mobile Applications & Processes** — paluno / University of Duisburg-Essen, Essen
 
-    **RESPONSIBILITIES & RESULTS**
-
+    #### RESPONSIBILITIES & RESULTS
     Autonomous leadership of the Mobile Applications & Processes research group at the Chair for Software Engineering. Dr. Griebe advanced subject development in mobile application architectures, test automation, and context-aware systems, and managed industry-oriented development and consulting projects to generate external funding.
 
-    **LEADERSHIP & ORGANISATIONAL DEVELOPMENT**
-
+    #### LEADERSHIP & ORGANISATIONAL DEVELOPMENT
     Functional leadership and mentoring of 6–7 research associates in project engagements as well as methodological coaching of doctoral candidates through the PhD process. Dr. Griebe established a collaborative research culture and managed knowledge transfer between academic and industrial project partners.

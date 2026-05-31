@@ -216,20 +216,19 @@
     }
 
     /* ── Subsection headers within experience entries ── */
-    dd p > strong:only-child {
+    dd h4 {
       font-family: 'Arial', 'Helvetica Neue', sans-serif;
       font-size: 6.5pt;
-      display: block;
       color: #18293a;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-weight: 700;
-      margin-bottom: 1px;
-    }
-    dd p:has(> strong:only-child) {
       margin-top: 14px;
+      margin-bottom: 1px;
+      page-break-after: avoid;
+      break-after: avoid;
     }
-    dd p:first-child:has(> strong:only-child) {
+    dd h4:first-child {
       margin-top: 0;
     }
 

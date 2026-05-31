@@ -14,16 +14,13 @@ seit 12/2025
 
 :   **Head of Consulting** — Cloudfactory GmbH
 
-    **AUFGABEN & ERGEBNISSE**
-
+    #### AUFGABEN & ERGEBNISSE
     Als Head of Consulting verantwortet Dr. Griebe die strategische Beratung von Enterprise-Projektpartnern zu Themen der digitalen Plattformentwicklung und modernen Engineering-Organisationen. Ein zentrales Mandat ist die Beratung der **50Hertz Transmission GmbH / Elia Group**, einem der führenden europäischen Übertragungsnetzbetreiber, beim Aufbau einer skalierbaren digitalen Developer-Plattform. Verantwortung umfasst Konzeption der Plattformstrategie, Steuerung der Delivery und Kommunikation auf Führungsebene beim Kunden.
 
-    **KI-INTEGRATION & DEVELOPER VELOCITY**
-
+    #### KI-INTEGRATION & DEVELOPER VELOCITY
     Ein Kernelement der Plattformstrategie ist die Gestaltung von Developer-Tooling-Ökosystemen, die interne Entwicklungszyklen nachhaltig beschleunigen. Dies umfasst die Integration KI-gestützter Entwicklungsassistenz, die Automatisierung von Test- und Deployment-Pipelines sowie den Aufbau von Self-Service-Plattformkapazitäten, die Entwicklerteams unabhängig von zentralen Infrastrukturengpässen machen.
 
-    **TECHNOLOGIE, METHODEN & GOVERNANCE**
-
+    #### TECHNOLOGIE, METHODEN & GOVERNANCE
     Schwerpunkte der Beratungsmandate liegen auf Cloud-nativen Developer-Plattformen, Platform Engineering, DevOps-Organisationsmodellen und skalierbaren Delivery-Strukturen für komplexe Unternehmensumgebungen im regulierten Infrastruktursektor.
 
 ## en
@@ -32,16 +29,13 @@ since 12/2025
 
 :   **Head of Consulting** — Cloudfactory GmbH
 
-    **RESPONSIBILITIES & RESULTS**
-
+    #### RESPONSIBILITIES & RESULTS
     As Head of Consulting, Dr. Griebe leads the strategic consulting of enterprise project partners on digital platform development and modern engineering organisations. A central mandate is advising **50Hertz Transmission GmbH / Elia Group**, one of Europe's leading transmission network operators, on building a scalable digital developer platform. Responsibilities encompass platform strategy design, delivery management, and executive-level communication with the client.
 
-    **AI INTEGRATION & DEVELOPER VELOCITY**
-
+    #### AI INTEGRATION & DEVELOPER VELOCITY
     A core element of the platform strategy is the design of developer tooling ecosystems that sustainably accelerate internal development cycles. This includes the integration of AI-assisted development tooling, automation of test and deployment pipelines, and building self-service platform capabilities that free development teams from central infrastructure bottlenecks.
 
-    **TECHNOLOGY, METHODS & GOVERNANCE**
-
+    #### TECHNOLOGY, METHODS & GOVERNANCE
     Consulting mandates focus on cloud-native developer platforms, platform engineering, DevOps organisational models, and scalable delivery structures for complex enterprise environments in regulated infrastructure sectors.
 
 ## de-short
