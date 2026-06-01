@@ -1,0 +1,37 @@
+# Tailored for: DKB – Chapter Lead Engineering Management
+# Focus: people leadership at scale, KPI-driven engineering, AI transformation
+# Language: DE | Format: extended (conservative template)
+# Tailoring notes: summary + competencies front-loaded; tech-stack skills dropped;
+#   adesso-head-cc included for finance/insurance client history
+
+name: Dr. Tobias Griebe
+subtitle:
+  de: "Chapter Lead · Engineering Management · Führung technischer Organisationen"
+  en: "Chapter Lead · Engineering Management · Technical Organisation Leadership"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv-conservative.html
+
+sections:
+  - summary
+  - core-competencies
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+        - durstexpress-lead-pm
+        - adesso-head-cc
+        - adesso-teamlead
+        - ude-team-lead-mobile
+  - education:
+      include:
+        - phd
+        - diplom
+  - skills:
+      include:
+        - leadership
+        - engineering-management
+        - agile-methods
+        - languages
+  - certifications

@@ -1,0 +1,30 @@
+# Tailored for: DKB – Chapter Lead Engineering Management
+# Focus: people leadership at scale, KPI-driven engineering, AI transformation
+# Language: DE | Format: one-pager (conservative template, compact)
+# Tailoring notes: summary + short competencies block; 3 most relevant roles;
+#   experience uses de-short variants; tech-stack skills dropped entirely
+
+name: Dr. Tobias Griebe
+subtitle:
+  de: "Chapter Lead · Engineering Management · Führung technischer Organisationen"
+  en: "Chapter Lead · Engineering Management · Technical Organisation Leadership"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv-conservative.html
+compact: true
+experience_compact: true
+
+sections:
+  - summary
+  - core-competencies-short
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include:
+        - phd
+  - skills:
+      include:
+        - languages
