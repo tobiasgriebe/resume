@@ -16,7 +16,7 @@ Dates without a tracked application date use the status/file date as approximati
 | 2026-04-20 | recare | Head of Engineering | Applied |
 | 2026-04-20 | pipedrive | Director of R&D Portfolio and Operations Management | Rejected |
 | ~ | BVV | Head of Engineering | Active |
-| ~ | Quality Group | Head of Engineering | Active |
+| ~ | Quality Group | Head of Engineering | Rejected |
 
 ---
 
