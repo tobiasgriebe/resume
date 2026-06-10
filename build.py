@@ -22,6 +22,7 @@ import re
 import subprocess
 from datetime import date
 from pathlib import Path
+from typing import Optional
 
 try:
     import yaml
@@ -236,7 +237,7 @@ def render_pdf(html_path: Path, pdf_path: Path) -> None:
     print(f"  PDF  → output/pdf/{pdf_path.name}")
 
 
-def determine_langs(profile: dict, lang_override: str | None) -> list[str]:
+def determine_langs(profile: dict, lang_override: Optional[str]) -> list[str]:
     if lang_override:
         return [lang_override]
     lang = profile.get("lang", "both")
@@ -247,9 +248,9 @@ def determine_langs(profile: dict, lang_override: str | None) -> list[str]:
 
 def build(
     profile_path: Path,
-    output_path: Path | None = None,
+    output_path: Optional[Path] = None,
     html_only: bool = False,
-    lang_override: str | None = None,
+    lang_override: Optional[str] = None,
 ) -> None:
     print(f"Profile: {profile_path.name}")
     profile = yaml.safe_load(profile_path.read_text(encoding="utf-8"))
