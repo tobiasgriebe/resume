@@ -23,7 +23,7 @@ Scrum · Kanban · OKR · Stakeholder-Management auf C-Level · Agile Transforma
 :::
 
 
-## Berufserfahrungs-Highlights
+## Berufstätigkeit
 
 seit 12/2025
 
@@ -43,29 +43,6 @@ seit 12/2025
 
     Leitung von Betrieb und Weiterentwicklung einer komplexen IT-Anwendungslandschaft im Konzernkontext der Würth Gruppe. Definition der Zielarchitektur für eine skalierende, hybridfähige Systemlandschaft (Red Hat OpenShift, Kubernetes) im Konzernrechenzentrum. Aufbau und Führung cross-funktionaler Engineering-Teams über den vollständigen Mitarbeiterlebenszyklus.
 
-11/2017 – 08/2019
-
-:   **Leiter Competence Center Digitalisierungsberatung** — adesso SE, Dortmund
-
-    Strategische IT-Beratung bei Unternehmenskunden: Make-or-Buy-Entscheidungen, Architekturentwurf Cloud-nativer Microservices-Plattformen, Aufbau eines interdisziplinären Beratungsteams (10–20 Personen). Akquise und Delivery komplexer IT-Transformationsprojekte.
-
-
-## Frühere Positionen
-
-::: {.earlier-positions}
-09/2019 – 03/2021
-:   **Lead Product Manager** (IT, Cloud & Logistik) — Durstexpress GmbH, Berlin
-
-06/2016 – 11/2017
-:   **Teamleiter Digitalisierungsberatung** — adesso SE, Dortmund
-
-01/2014 – 04/2016
-:   **Leiter Arbeitsgruppe Mobile Anwendungen & Prozesse** — paluno / Universität Duisburg-Essen
-
-07/2010 – 01/2014
-:   **Wissenschaftlicher Mitarbeiter Software Engineering** — paluno / Universität Duisburg-Essen
-:::
-
 
 ## Studium
 
@@ -74,3 +51,10 @@ seit 12/2025
 :   **Promotion Dr. rer. nat.** — *summa cum laude*
 
     „Methode und Technologie zur modellbasierten Automatisierung von Tests kontextsensitiver mobiler Anwendungen"
+
+
+## Kenntnisse
+
+**Sprachen**
+
+Deutsch (Muttersprache), Englisch (verhandlungssicher)

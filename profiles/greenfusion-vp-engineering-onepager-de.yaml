@@ -1,0 +1,28 @@
+# Tailored for: Green Fusion – VP Engineering
+# Language: DE | Format: one-pager (conservative template, compact)
+# Tailoring notes: top 3 roles only; de-short variants; no tech-stack skills
+
+name: Dr. Tobias Griebe
+subtitle:
+  de: "VP Engineering · Engineering-Organisation · Plattformtransformation"
+  en: "VP Engineering · Engineering Organisation · Platform Transformation"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv-conservative.html
+compact: true
+experience_compact: true
+
+sections:
+  - summary
+  - core-competencies-short
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include:
+        - phd
+  - skills:
+      include:
+        - languages
