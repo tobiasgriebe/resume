@@ -117,7 +117,8 @@ def resolve_files(section_type: str, include) -> list[Path]:
 
     subdir = CONTENT_DIR / section_type
     if not subdir.is_dir():
-        return []
+        candidate = CONTENT_DIR / f"{section_type}.md"
+        return [candidate] if candidate.exists() else []
 
     if include == "all":
         files = list(subdir.glob("*.md"))
@@ -155,7 +156,8 @@ def assemble(profile: dict, lang: str) -> str:
         if override:
             label = override.get(lang, section_type.title()) if isinstance(override, dict) else str(override)
         else:
-            label = SECTION_LABELS.get(section_type, {}).get(lang, section_type.title())
+            base_type = section_type.split("-")[0]
+            label = (SECTION_LABELS.get(section_type) or SECTION_LABELS.get(base_type, {})).get(lang, section_type.title())
         parts.append(f"\n## {label}\n")
 
         extract_lang = f"{lang}-short" if (compact_exp and section_type == "experience") else lang

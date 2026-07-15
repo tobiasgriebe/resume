@@ -1,0 +1,21 @@
+name: Dr. Tobias Griebe
+subtitle: "Head of Product & Engineering · Scaling Engineering Organisations · Digital Product Strategy"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+lang: en
+compact: true
+experience_compact: true
+
+sections:
+  - summary-head-of-pe
+  - core-competencies-short
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include: [phd]
+  - skills:
+      include: [languages]
