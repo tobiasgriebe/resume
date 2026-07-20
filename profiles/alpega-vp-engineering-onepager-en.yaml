@@ -1,0 +1,28 @@
+# Tailored for: Alpega Group – Vice President Software Engineering (Group)
+# Focus: platform modernisation, KPI-driven delivery, AI-assisted engineering,
+#   CEO-level stakeholder management; scale narrative via 50Hertz portfolio mandate
+# Language: EN | Format: one-pager (compact)
+# Tailoring notes: top 3 roles only; en-short variants; no tech-stack skills
+#   (covered by core-competencies-short)
+
+name: Dr. Tobias Griebe
+subtitle: "VP Software Engineering · Platform Modernisation · AI-Driven Delivery Excellence"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+lang: en
+compact: true
+experience_compact: true
+
+sections:
+  - summary
+  - core-competencies-short
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include: [phd]
+  - skills:
+      include: [languages]

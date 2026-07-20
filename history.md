@@ -9,6 +9,7 @@ Dates without a tracked application date use the status/file date as approximati
 
 | Date | Company | Role | Status |
 |------|---------|------|--------|
+| 2026-07-20 | Alpega Group | Vice President Software Engineering (Group) | Applied |
 | 2026-06-20 | Green Fusion | VP Engineering | Applied |
 | 2026-06-01 | DKB | Chapter Lead Engineering Management | Applied |
 | 2026-04-20 | MD-IT GmbH | Head of Engineering | Rejected (other panel members vetoed strong candidate) |
