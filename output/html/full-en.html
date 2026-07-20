@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Tobias Griebe</title>
+  <style>
+    /* ── Page setup ── */
+    @page {
+      size: A4;
+      margin: 16mm 20mm 16mm 20mm;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 9pt;
+      color: #1a1a1a;
+      background: white;
+    }
+
+    /* ── Header (first page) ── */
+    header {
+      background: #18293a;
+      color: white;
+      padding: 26px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .header-name {
+      font-size: 22pt;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      line-height: 1.1;
+    }
+
+    .header-subtitle {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 7.5pt;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      color: #90b4cc;
+      margin-top: 6px;
+    }
+
+    .header-contact {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 7.5pt;
+      color: #b8cdd8;
+      margin-top: 9px;
+      line-height: 1.5;
+    }
+
+    .header-contact a { color: #90b4cc; text-decoration: none; }
+
+    .portrait {
+      width: 3.6cm;
+      height: 3.6cm;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 10%;
+      border: 2px solid rgba(255,255,255,0.22);
+      flex-shrink: 0;
+    }
+
+    /* ── Body content ── */
+    .body-content {
+      padding-top: 18px;
+    }
+
+    /* ── Section headings (## in markdown) ── */
+    h2 {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #18293a;
+      border-bottom: 1.5px solid #18293a;
+      padding-bottom: 4px;
+      margin-top: 20px;
+      margin-bottom: 11px;
+      font-weight: 700;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Definition lists — experience/education entries ── */
+    dl { margin: 0; }
+
+    dt {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      color: #888;
+      float: left;
+      clear: left;
+      width: 128px;
+      padding-right: 10px;
+      padding-top: 2px;
+      line-height: 1.45;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    dd {
+      margin-left: 140px;
+      margin-bottom: 14px;
+      overflow: hidden; /* contain floated dt */
+    }
+
+    dd p {
+      font-size: 8.5pt;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 3px;
+    }
+
+    dd p:first-child strong {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 9.5pt;
+      color: #111;
+    }
+
+    dd ul {
+      margin: 4px 0 0;
+      padding-left: 15px;
+    }
+
+    dd li {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 1px;
+    }
+
+    /* ── Skill blocks (bold heading + paragraph) ── */
+    .body-content > p { /* top-level paragraphs (skills, personal) */
+      font-size: 8.5pt;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 7px;
+    }
+
+    .body-content > p > strong:first-child {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      display: block;
+      color: #18293a;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 2px;
+    }
+
+    /* ── Bullet lists (certifications, skills) ── */
+    .body-content > ul {
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+
+    .body-content > ul li {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8.5pt;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 2px;
+    }
+
+    /* ── Executive summary ── */
+    .executive-summary {
+      border-left: 3px solid rgba(144, 180, 204, 0.75);
+      padding: 10px 16px;
+      margin: 0 0 2px;
+      background: rgba(24, 41, 58, 0.03);
+    }
+    .executive-summary p {
+      font-style: italic;
+      font-size: 9pt;
+      line-height: 1.5;
+      color: #222;
+      margin: 0;
+    }
+
+    /* ── Core competencies grid ── */
+    .core-competencies-2col,
+    .core-competencies-3col {
+      margin-bottom: 4px;
+    }
+    .core-competencies-2col { column-count: 2; column-gap: 22px; }
+    .core-competencies-3col { column-count: 3; column-gap: 16px; }
+
+    .core-competencies-2col p,
+    .core-competencies-3col p {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .core-competencies-2col p strong:first-child,
+    .core-competencies-3col p strong:first-child {
+      font-size: 7pt;
+      display: block;
+      color: #18293a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    /* ── Subsection headers within experience entries ── */
+    dd h4 {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 6.5pt;
+      color: #18293a;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-top: 14px;
+      margin-bottom: 1px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    dd h4:first-child {
+      margin-top: 0;
+    }
+
+    /* ── Earlier positions — compact DL, no description text ── */
+    .earlier-positions dd {
+      margin-bottom: 5px;
+    }
+    .earlier-positions dd p {
+      font-size: 8.5pt;
+      margin-bottom: 0;
+    }
+
+    /* ── Executive-level leadership competencies (2-col bullet list + page break) ── */
+    .executive-competencies {
+      column-count: 2;
+      column-gap: 22px;
+      margin-bottom: 0;
+      break-after: page;
+      page-break-after: always;
+    }
+    .executive-competencies ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .executive-competencies li {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 5px;
+      padding-left: 13px;
+      text-indent: -13px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .executive-competencies li::before {
+      content: "▸ ";
+      color: #18293a;
+      font-size: 7pt;
+    }
+
+    /* ── Links ── */
+    a { color: #18293a; }
+
+    /* ── Misc ── */
+    em { font-style: italic; }
+    strong { font-weight: 700; }
+
+    /* ── Page break helpers ── */
+    h2 { page-break-after: avoid; break-after: avoid; }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-text">
+    <div class="header-name">Dr. Tobias Griebe</div>
+    <div class="header-subtitle">Engineering Director · IT Department Head · Platform Engineering</div>
+
+    <div class="header-contact">Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com</div>
+
+  </div>
+  <img src="/Users/tobiasgriebe/private/resume/portrait2.jpg" class="portrait" alt="Dr. Tobias Griebe">
+
+</header>
+
+<div class="body-content">
+<h2 id="executive-profile">Executive Profile</h2>
+<div class="executive-summary">
+<p><em>PhD computer scientist (Dr. rer. nat., summa cum laude) and
+seasoned IT leader with over 15 years of progressive management
+responsibility in technology-driven organisations at varying stages of
+maturity. I combine deep engineering expertise in software architecture,
+cloud platforms, DevOps and API ecosystems with sustainable people
+leadership and strategic IT management. My strength lies in driving IT
+transformation not as an end in itself, but as a measurable lever for
+business growth, operational stability and innovation capacity. I lead
+IT organisations from team-building through target architecture to
+governance, communicating confidently at C-level and with
+cross-functional stakeholders.</em></p>
+</div>
+<h2 id="core-competencies">Core Competencies</h2>
+<div class="core-competencies-3col">
+<p><strong>IT STRATEGY &amp; ARCHITECTURE</strong> Cloud-first /
+API-first target architectures · Enterprise Architecture · IT roadmaps
+&amp; OKRs · Microservices &amp; platform strategy · Application
+landscape modernisation · Technical debt management</p>
+<p><strong>LEADERSHIP &amp; ORGANISATION</strong> Disciplinary
+leadership of 50+ people · Engineering Manager coaching · Career
+framework &amp; performance management · Organisational design ·
+Recruiting &amp; retention · Agile governance &amp; value streams</p>
+<p><strong>IT MANAGEMENT &amp; GOVERNANCE</strong> Budget &amp;
+investment planning (€1–5M) · Portfolio &amp; project prioritisation ·
+Make-or-buy decisions · Vendor &amp; contract management ·
+GDPR-compliant infrastructure · Audit-readiness</p>
+<p><strong>TECHNOLOGY &amp; OPERATIONS</strong> AWS · Kubernetes /
+Docker · Red Hat OpenShift · Spring Boot / Kotlin / Java · TypeScript /
+React / Node.js · DevOps · CI/CD · Incident &amp; change management</p>
+<p><strong>DIGITAL TRANSFORMATION</strong> Agile transformation (Scrum,
+Kanban) · Cloud migration &amp; modernisation · Mobile platforms (iOS,
+Android, Flutter) · B2B/B2E product engineering · Requirements
+engineering &amp; solution design</p>
+<p><strong>COMMUNICATION &amp; STAKEHOLDERS</strong> C-level &amp;
+executive reporting · Corporate governance &amp; alignment · Client
+acquisition &amp; delivery · Cross-functional team leadership · External
+partner management</p>
+</div>
+<h2 id="leadership-competencies-at-executive-level">Leadership
+Competencies at Executive Level</h2>
+<div class="executive-competencies">
+<ul>
+<li>IT financial management: CapEx/OpEx control, cloud cost optimisation
+(FinOps)</li>
+<li>Digital product &amp; platform strategy (cloud-native, API
+economy)</li>
+<li>Sourcing &amp; vendor management: provider governance, SLA
+management</li>
+<li>Organisational development: career frameworks, succession
+planning</li>
+<li>Enterprise Architecture Management: target architecture, fit/gap,
+EAM frameworks</li>
+<li>IT compliance &amp; risk management: GDPR, audit-readiness, Zero
+Trust principles</li>
+<li>Corporate contexts: governance in matrix-organised enterprise
+structures</li>
+<li>Change management: cultural &amp; structural IT transformation at
+organisational level</li>
+</ul>
+</div>
+<h2 id="work-experience">Work Experience</h2>
+<dl>
+<dt>since 12/2025</dt>
+<dd>
+<p><strong>Head of Consulting</strong> — Cloudfactory GmbH</p>
+<h4 id="mandate-50hertz-transmission-gmbh-elia-group">MANDATE: 50HERTZ
+TRANSMISSION GMBH / ELIA GROUP</h4>
+<p>Strategic consulting and leadership mandate with <strong>50Hertz
+Transmission GmbH / Elia Group</strong>, one of Europe’s leading
+electricity transmission system operators. The mandate covers two
+parallel tracks:</p>
+<p><strong>Product Line Product Management Lead</strong> — Accountable
+for product strategy, roadmap management, and product specifications for
+a product line of four technical platform products within a sovereign
+cloud platform for a DAX-listed infrastructure company: <em>Internal
+Developer Portal</em> (self-service UI for cloud resource and access
+management in a multi-tenant operating model), <em>CI/CD &amp; Supply
+Chain Security Platform</em> (SCM, CI/CD, and software supply chain
+security), <em>Sovereign Artefact Registry</em> (sovereign artefact
+management, shielding the cloud platform from external third-party
+dependency providers), and <em>Release Promotion Service</em> (secure
+governance of application package promotion between air-gapped execution
+environments). Member of the extended programme leadership; reporting
+line into the programme management board including the CIO level.
+Outcomes: published product line portfolio, four full product
+specifications, four launched platform products, established product
+management process within the product line.</p>
+<p><strong>Platform Engineering Lead</strong> — Design of the
+overarching platform strategy, delivery steering, and executive-level
+client communication. Focus areas: cloud-native developer platforms,
+platform engineering, DevOps organisational models, and scalable
+delivery structures for complex enterprise environments in regulated
+infrastructure sectors.</p>
+<h4 id="ai-integration-developer-velocity">AI INTEGRATION &amp;
+DEVELOPER VELOCITY</h4>
+<p>A core element of the platform strategy is the design of developer
+tooling ecosystems that sustainably accelerate internal development
+cycles. This includes the integration of AI-assisted development
+tooling, automation of test and deployment pipelines, and building
+self-service platform capabilities that free development teams from
+central infrastructure bottlenecks.</p>
+</dd>
+<dt>02/2023 – 11/2025</dt>
+<dd>
+<p><strong>Engineering Director</strong> — sevDesk GmbH, Offenburg</p>
+<h4 id="responsibilities-results">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>As Engineering Director, Dr. Griebe is responsible for two of the
+three pillars of sevDesk’s R&amp;D organisation: Platform Engineering
+and Growth &amp; Retention. As one of Germany’s leading cloud accounting
+providers in the SME segment, sevDesk grows at high velocity; both areas
+are directly and strategically involved. He oversees roadmap, technical
+vision, and architecture strategy across both areas, managing headcount
+and hiring budget in close alignment with the executive team. A central
+outcome of his tenure is the initiation and management of a company-wide
+application modernisation programme, migrating the grown product
+landscape to a cloud-native, containerised target architecture
+(Kubernetes/Docker on AWS). The technical roadmap is aligned via the OKR
+framework and operationalised into measurable quarterly goals.</p>
+<h4 id="leadership-organisational-development">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Dr. Griebe has disciplinary leadership of 6 Engineering Managers,
+making him indirectly responsible for over 40 software developers across
+product feature teams and cloud infrastructure teams. A central focus
+was the strategic formation of the Platform Engineering pillar as a
+standalone unit within the R&amp;D organisation, including full
+ownership of the hiring process for a dedicated Engineering Director
+position. He established a company-wide career framework and performance
+management system that creates structured development pathways,
+transparent evaluation criteria, and a performance-oriented feedback
+culture.</p>
+<h4 id="ai-integration-developer-velocity-1">AI INTEGRATION &amp;
+DEVELOPER VELOCITY</h4>
+<p>Under Dr. Griebe’s leadership, a strategic shift-and-lift programme
+of the entire development infrastructure from GitLab to GitHub was
+executed. The programme encompassed the full transformation of CI/CD
+pipelines and automation landscape under a rigorous DevSecOps approach:
+security scanning, dependency auditing, and compliance checks are now
+embedded as integral components of every delivery pipeline. The
+migration to GitHub Actions simultaneously creates the technical
+foundation for targeted integration of AI-assisted development tools and
+automated code quality pipelines.</p>
+<h4 id="technology-methods-governance">TECHNOLOGY, METHODS &amp;
+GOVERNANCE</h4>
+<p>The product stack includes Spring Boot/Kotlin, PHP, and React; the
+platform infrastructure runs on Docker and Kubernetes in AWS. Dr. Griebe
+established architectural standards and API-first principles as well as
+Architecture Decision Records (ADRs) as a governance instrument.
+Delivery quality and velocity are measured using <strong>DORA
+metrics</strong> (Deployment Frequency, Lead Time, Change Failure Rate,
+MTTR) and used as a steering instrument in quarterly reviews. The
+compliance-aligned cloud infrastructure explicitly addresses GoBD
+requirements. Observability is ensured through Datadog, New Relic, and
+PagerDuty; on-call programmes and incident management processes are
+firmly established.</p>
+</dd>
+<dt>04/2021 – 01/2023</dt>
+<dd>
+<p><strong>Head of Software Development and Platform
+Architecture</strong> — Würth Cloud Services GmbH, Bad Mergentheim</p>
+<h4 id="responsibilities-results-1">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>At Würth Cloud Services, Dr. Griebe was responsible for both the
+modernisation of existing legacy systems and the parallel build-out of
+new platform components — in an environment combining the IT governance
+of a near-DAX corporate group with the speed of change of a startup. The
+system landscape targeted small and medium-sized craftsmen businesses,
+integrating mobile and stationary applications in a scalable cloud
+environment. Definition of the target architecture, prioritisation of
+the modernisation portfolio by business value, and management of
+operations and further development were solely his responsibility,
+including headcount and investment budget management in close
+coordination with Würth IT and the corporate board.</p>
+<h4 id="leadership-organisational-development-1">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Dr. Griebe built the engineering team from scratch, leading frontend
+and backend developers as well as mobile engineers across the full
+employee lifecycle: from recruiting and onboarding through qualification
+and career development to targeted retention measures. In the
+corporate-backed startup context, he established a leadership culture
+combining technical excellence with entrepreneurial thinking and
+personal accountability. Disciplinary and functional leadership spanned
+cross-functional teams and required communication both within Würth
+Group’s corporate structures and with external development partners.</p>
+<h4 id="technology-methods-governance-1">TECHNOLOGY, METHODS &amp;
+GOVERNANCE</h4>
+<p>The platform architecture was based on Red Hat OpenShift in the Würth
+corporate data centre, complemented by Docker and Kubernetes for
+container orchestration; the product stack included PHP,
+TypeScript/JavaScript, Node.js, Java, Spring Boot, React, and Flutter.
+Architecture decisions were made and documented in alignment with Würth
+Group’s IT governance and security standards. Operations, monitoring,
+and incident management were the team’s responsibility; integration into
+Würth’s IT infrastructure required structured change management
+processes and regular reporting at corporate level.</p>
+</dd>
+<dt>09/2019 – 03/2021</dt>
+<dd>
+<p><strong>Lead Product Manager</strong> — Durstexpress GmbH, Berlin</p>
+<h4 id="responsibilities-results-2">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>Product management for an extensive IT application landscape in
+retail, warehouse, and logistics in a hyper-growth environment with
+significant scaling velocity. Dr. Griebe designed and led the
+implementation of a mobile B2B/B2E software solution for over 3,500
+warehouse and logistics workers, and developed a scalable system
+architecture in a Microsoft-based cloud environment with Docker and
+Kubernetes. C-level stakeholder management, requirements engineering,
+and agile project management (Scrum, Kanban) bridged business and
+engineering.</p>
+<h4 id="leadership-organisational-development-2">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Disciplinary and functional leadership of cross-functional software
+teams across the full employee lifecycle: recruiting, qualification,
+career development, and retention in a hyper-growth context under high
+scaling pressure. Dr. Griebe established the product management function
+as an independent organisational unit and created structured development
+pathways and evaluation frameworks for the growing PM organisation.</p>
+</dd>
+<dt>11/2017 – 08/2019</dt>
+<dd>
+<p><strong>Head of Competence Center Digitalization / IT
+Consulting</strong> — adesso SE, Dortmund</p>
+<h4 id="responsibilities-results-3">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>As Head of the Digitalisation Competence Center, Dr. Griebe was
+responsible for the strategic build-up and autonomous management of a
+profitable consulting practice at one of Germany’s leading IT service
+providers. He acquired and delivered IT transformation projects at
+enterprise clients with project volumes of €1–5M, spanning initial
+requirements analysis, fit/gap assessments, make-or-buy decisions, and
+delivery of complex cloud-native architectures. The practice was
+established as a standalone profit-centre unit with demonstrable growth
+in new client business, serving clients in finance and insurance
+sectors.</p>
+<h4 id="leadership-organisational-development-3">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Dr. Griebe built an interdisciplinary consulting and development team
+of up to 20 people, taking disciplinary and functional leadership
+responsibility across the full employee lifecycle. He developed
+structured competency pathways, conducted regular performance and
+potential reviews, and established systematic knowledge transfer within
+the team. He entered the leadership role as team lead (06/2016) and
+assumed overall management of the Competence Center within eighteen
+months (11/2017).</p>
+<h4 id="technology-methods-governance-2">TECHNOLOGY, METHODS &amp;
+GOVERNANCE</h4>
+<p>Consulting projects covered cloud-native architectures with
+microservices, Java Spring Boot, Docker, and Kubernetes, as well as the
+design of mobile applications and the introduction of agile governance
+models (Scrum, Kanban) at enterprise clients. Requirements engineering,
+solution design, and architecture reviews on the client side were
+integral elements of the project roles. Project management and
+documentation used Jira, Confluence, and MS-TFS.</p>
+</dd>
+<dt>06/2016 – 11/2017</dt>
+<dd>
+<p><strong>Team Lead Digitalisation Consulting</strong> — adesso SE,
+Dortmund</p>
+<h4 id="responsibilities-results-4">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>Functional ownership and team leadership in digitalisation consulting
+and mobile systems. Dr. Griebe led consulting projects at enterprise
+clients, managed requirements analysis, and designed scalable software
+architectures for backend systems and mobile applications. In this role,
+he laid the substantive and organisational foundation for the subsequent
+build-up of the Digitalisation Competence Center.</p>
+<h4 id="leadership-organisational-development-4">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Disciplinary and functional leadership and mentoring of 10+ team
+members in consulting engagements. Dr. Griebe fostered team cohesion and
+managed systematic knowledge transfer within the team; the combination
+of technical expertise and leadership capability prepared the rapid
+progression to Competence Center management.</p>
+</dd>
+<dt>04/2016 – 06/2016</dt>
+<dd>
+<p><strong>Managing Consultant / IT Consulting</strong> — adesso SE,
+Dortmund (Digitalization Strategy &amp; Mobile Systems)</p>
+</dd>
+<dt>01/2014 – 04/2016</dt>
+<dd>
+<p><strong>Team Lead Mobile Applications &amp; Processes</strong> —
+paluno / University of Duisburg-Essen, Essen</p>
+<h4 id="responsibilities-results-5">RESPONSIBILITIES &amp; RESULTS</h4>
+<p>Autonomous leadership of the Mobile Applications &amp; Processes
+research group at the Chair for Software Engineering. Dr. Griebe
+advanced subject development in mobile application architectures, test
+automation, and context-aware systems, and managed industry-oriented
+development and consulting projects to generate external funding.</p>
+<h4 id="leadership-organisational-development-5">LEADERSHIP &amp;
+ORGANISATIONAL DEVELOPMENT</h4>
+<p>Functional leadership and mentoring of 6–7 research associates in
+project engagements as well as methodological coaching of doctoral
+candidates through the PhD process. Dr. Griebe established a
+collaborative research culture and managed knowledge transfer between
+academic and industrial project partners.</p>
+</dd>
+<dt>07/2010 – 01/2014</dt>
+<dd>
+<p><strong>Research Associate</strong> — paluno / University of
+Duisburg-Essen, Essen</p>
+<p>Chair for Software Engineering, especially mobile systems.</p>
+</dd>
+<dt>07/2009 – 06/2010</dt>
+<dd>
+<p><strong>Research Associate</strong> — Chair of Applied
+Telematics/e-Business, University of Leipzig</p>
+</dd>
+</dl>
+<h2 id="education">Education</h2>
+<dl>
+<dt>04/2017</dt>
+<dd>
+<p><strong>Doctorate Dr. rer. nat. / PhD</strong> — <em>summa cum
+laude</em></p>
+<p>“Method and Technology for Model-based Automation of Software Tests
+for Context-Aware Mobile Applications”</p>
+</dd>
+<dt>06/2009</dt>
+<dd>
+<p><strong>Diploma in Computer Science</strong> — University of Leipzig
+(10/2002 – 06/2009)</p>
+<p>Minor: Philosophy</p>
+<p>Diploma Thesis: “Generation of Test Plans from UML Activity Diagrams
+by Model Transformation”</p>
+</dd>
+</dl>
+<h2 id="skills">Skills</h2>
+<p><strong>Leadership &amp; People Development</strong></p>
+<p>Disciplinary and functional leadership of technical teams at all
+levels — from individual contributors to Engineering Managers. Building
+and steering teams across the full lifecycle: recruiting, onboarding,
+qualification, career development, and retention. Coaching and mentoring
+of managers and individual contributors. Performance and potential
+evaluation; goal-oriented use of people development instruments. Team
+health assessments; fostering psychological safety and team
+cohesion.</p>
+<p><strong>Engineering Management &amp; IT Governance</strong></p>
+<p>Technical vision and roadmap ownership across multiple teams and
+products. IT governance: rollout of SAST tooling in CI/CD pipelines
+(GitLab, GitHub Actions), mandatory workload tagging, security policies.
+Observability: Datadog, New Relic, PagerDuty, Sentry. On-call and
+incident management programs. Architecture documentation with Arc42.
+DORA metrics as a steering instrument. Organizational design and career
+frameworks for engineering organizations.</p>
+<p><strong>Agile Methods &amp; UX</strong></p>
+<p>Scrum, Kanban; agile transformation and coaching. Customer Safari,
+Customer Journey, User Story Mapping, Personas, Business Model Canvas,
+Touch Point Analysis, Interaction Room. BPMN, UML, EPK, Petri-Nets.
+Project management: Jira, Confluence.</p>
+<p><strong>Cloud &amp; Infrastructure</strong></p>
+<p>Kubernetes, Docker; AWS, Google Cloud Platform, Red Hat OpenShift.
+Microservice architectures; event-driven architecture; CI/CD pipelines
+(GitLab, GitHub Actions, Jenkins, TeamCity). SAST tooling, SonarQube.
+Subversion, Git.</p>
+<p><strong>Backend Development</strong></p>
+<p>Java/Kotlin, Spring Boot; PHP; MySQL, PostgreSQL, MongoDB. REST,
+JSON, XML. JUnit, Robotium, Calabash, Cucumber. PlantUML, UML modelling.
+Eclipse, IntelliJ IDEA.</p>
+<p><strong>Mobile Platforms</strong></p>
+<p>iOS (Objective-C/Swift), Android (Java/Kotlin); React Native,
+Flutter, Xamarin. Android Things, Arduino. BlackBerry, Java ME.</p>
+<p><strong>Product Management &amp; Requirements
+Engineering</strong></p>
+<p>Product management for complex IT application landscapes.
+Requirements engineering, solution design, and user story mapping.
+Stakeholder management at C-level; make-or-buy decisions and fit/gap
+analyses. Data-driven product management. Process and project
+management; Jira, Confluence, MS-TFS.</p>
+<p><strong>Languages</strong></p>
+<p>German (native), English (fluent)</p>
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li>Professional Scrum Product Owner PSPO I (scrum.org)</li>
+<li>Professional Agile Leadership I (scrum.org)</li>
+<li>ISTQB Certified Tester Foundation Level</li>
+<li>Certified Professional Leadership PROAKTIV Licence to Lead</li>
+<li>Interaction-Room-Coach — Foundation Level</li>
+</ul>
+<h2 id="projects">Projects</h2>
+<p><strong>bofrost* Mobile Point-of-Sales</strong> (05/2018 –
+08/2019)</p>
+<ul>
+<li><strong>Type:</strong> Consulting, Implementation ·
+<strong>Role:</strong> Consultant, Architect</li>
+<li><strong>Tech:</strong> Android, Spring Boot, Google Firebase, Google
+Cloud Platform, Docker, Kubernetes</li>
+<li><strong>Client:</strong> bofrost* Dienstleistungs GmbH &amp; Co. KG
+· <strong>Delivery:</strong> adesso AG, adesso mobile solutions
+GmbH</li>
+</ul>
+<p>Redesign of the mobile point-of-sales solution used since 2001 by
+approx. 4,200 sales drivers. Architecture design for frontend (Android)
+and backend (cloud-based microservices); product owner consulting and
+requirements engineering.</p>
+<p><strong>Design Network Cologne / ambista</strong> (07/2016 –
+12/2016)</p>
+<ul>
+<li><strong>Type:</strong> Consulting · <strong>Role:</strong> Technical
+Project Lead, Consultant, Requirements Engineer</li>
+<li><strong>Client:</strong> Koelnmesse GmbH ·
+<strong>Delivery:</strong> adesso AG</li>
+</ul>
+<p>Development and operation of an industry platform as a content-driven
+B2B business network for the interior design and furnishings sector.
+Requirements analysis, conception, technical project management, and
+steering of external service providers.</p>
+<p><strong>Union Investment Enterprise Mobility —
+Implementation</strong> (08/2016 – 02/2018)</p>
+<ul>
+<li><strong>Type:</strong> Implementation · <strong>Role:</strong>
+Consultant, Product Owner, Test Manager</li>
+<li><strong>Tech:</strong> iOS, Xamarin, SAP, SharePoint, TFS</li>
+<li><strong>Client:</strong> Union Investment IT-Services GmbH ·
+<strong>Delivery:</strong> adesso AG</li>
+</ul>
+<p>Mobilizing access to enterprise processes via mobile devices for
+management and specialist staff. Consulting on the design and
+implementation of a solution architecture to integrate mobile processes
+into the Union Investment Group’s IT landscape.</p>
+<p><strong>Union Investment Enterprise Mobility — Feasibility
+Study</strong> (04/2016 – 06/2016)</p>
+<ul>
+<li><strong>Type:</strong> Feasibility Study · <strong>Role:</strong>
+Consultant, Requirements Engineer</li>
+<li><strong>Client:</strong> Union Investment IT-Services GmbH ·
+<strong>Delivery:</strong> adesso AG</li>
+</ul>
+<p>Design of a solution architecture and delivery model for enterprise
+application mobilization; conception of a development guideline for
+external service providers.</p>
+<p><strong>Symphony — BMWi Research Project</strong> (11/2014 –
+06/2016)</p>
+<ul>
+<li><strong>Type:</strong> Research project · <strong>Role:</strong>
+Consortium Lead, Overall Project Manager</li>
+<li><strong>Partners:</strong> paluno (University of Duisburg-Essen),
+adesso AG, IN-telegence GmbH · <strong>Funder:</strong> BMWi (German
+Federal Ministry for Economic Affairs)</li>
+</ul>
+<p>Online marketplace for IP-based telecommunications services: compare,
+select, combine, book, and manage telecom services through a unified
+platform. Overall project management and consortium leadership.</p>
+<p><strong>Study: Usability in IT Applications at Insurance
+Companies</strong> (05/2013 – 06/2014)</p>
+<ul>
+<li><strong>Type:</strong> Study · <strong>Role:</strong>
+Consultant</li>
+<li><strong>Client:</strong> ITERGO GmbH / ERGO Versicherungsgruppe AG ·
+<strong>Delivery:</strong> paluno, University of Duisburg-Essen</li>
+</ul>
+<p>Analysis and assessment of the organizational structure for
+integrating a new usability unit into software projects. Definition of
+responsibilities, processes, and competencies for the Usability
+Controlling department.</p>
+<p><strong>Scan + Pay 2 — PostFinance Banking App</strong> (05/2014 –
+07/2014)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> Android, iOS, Optical Character Recognition
+(OCR)</li>
+<li><strong>Client:</strong> PostFinance · <strong>Delivery:</strong>
+paluno, adesso mobile solutions GmbH</li>
+</ul>
+<p>Technology evaluation for OCR-based recognition of payment data from
+payment slips using mobile device cameras.</p>
+<p><strong>Study: New Technologies — Clouds, Apps and eCommunities in
+Social Security</strong> (04/2013 – 12/2013)</p>
+<ul>
+<li><strong>Type:</strong> Study · <strong>Role:</strong> Project
+Lead</li>
+<li><strong>Client:</strong> ITSG GmbH · <strong>Delivery:</strong>
+paluno, University of Duisburg-Essen</li>
+</ul>
+<p>Assessment of cloud technologies and mobile applications in the
+social security sector.</p>
+<p><strong>Scanning Payment Slips</strong> (06/2013 – 10/2013)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Consultant, Developer</li>
+<li><strong>Tech:</strong> iOS, Optical Character Recognition (OCR),
+OpenCV Image Processing</li>
+<li><strong>Delivery:</strong> paluno / adesso mobile solutions
+GmbH</li>
+</ul>
+<p>Technology evaluation and development: OCR-based recognition of
+payment data from payment slips using mobile device cameras.</p>
+<p><strong>DKV App Prototype @ ITERGO GmbH</strong> (2013)</p>
+<ul>
+<li><strong>Type:</strong> Training project · <strong>Role:</strong>
+Consultant</li>
+<li><strong>Tech:</strong> iOS</li>
+<li><strong>Client:</strong> ITERGO GmbH / ERGO Versicherungsgruppe AG ·
+<strong>Delivery:</strong> paluno</li>
+</ul>
+<p>Development of a mobile app with insurance-specific content as
+training-on-the-job for ITERGO GmbH staff.</p>
+<p><strong>Union Investment — Meine Fondswelt</strong> (08/2012 –
+10/2012)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> iOS, Webservices, REST, XML</li>
+<li><strong>Client:</strong> Union Asset Management Holding AG ·
+<strong>Delivery:</strong> paluno, adesso mobile solutions GmbH</li>
+</ul>
+<p>iOS app providing access to fund information, prices, performance
+data, and a portfolio planning tool.</p>
+<p><strong>Barmenia LebensChecker App</strong> (06/2012 – 10/2012)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> iOS (iPad)</li>
+<li><strong>Client:</strong> Barmenia Versicherungen AG ·
+<strong>Delivery:</strong> paluno, adesso AG, ARITHNEA GmbH</li>
+</ul>
+<p>iPad app to support life insurance advisory activities for field
+sales representatives.</p>
+<p><strong>MobileCamp iOS @ ITERGO GmbH</strong> (04/2012)</p>
+<ul>
+<li><strong>Type:</strong> Training project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> iOS</li>
+<li><strong>Client:</strong> ITERGO GmbH / ERGO Versicherungsgruppe AG ·
+<strong>Delivery:</strong> paluno</li>
+</ul>
+<p>Design and delivery of an iOS application development training
+program for upskilling IT staff alongside their regular duties.</p>
+<p><strong>DONG Energy Markets GmbH App</strong> (01/2012)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> iOS, JSON, Core Data, Core Plot</li>
+<li><strong>Client:</strong> DONG Energy Markets GmbH ·
+<strong>Delivery:</strong> paluno, itCampus GmbH</li>
+</ul>
+<p>iOS app enabling customers to view and graphically visualise daily
+updated settlement quotations for energy and natural gas products.</p>
+<p><strong>ITERGO Trend Study</strong> (08/2010 – 01/2012)</p>
+<ul>
+<li><strong>Type:</strong> Research project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Client:</strong> ITERGO / ERGO Versicherungsgruppe AG ·
+<strong>Delivery:</strong> paluno, University of Duisburg-Essen</li>
+</ul>
+<p>Study on IT mobilization strategies in the insurance sector:
+medium-term trend forecast for mobile applications with regard to IT
+infrastructure and marketing strategies; design of a mobilization
+strategy and mobile application portfolio for ERGO Versicherungsgruppe
+AG.</p>
+<p><strong>MDR Jump — Sport im Osten</strong> (07/2011 – 08/2011)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> BlackBerry, Android, Java, HTTP, XML, RTSP,
+GPS, audio streaming, video streaming</li>
+<li><strong>Client:</strong> Mitteldeutscher Rundfunk (MDR) ·
+<strong>Delivery:</strong> paluno, itCampus Systemhaus GmbH</li>
+</ul>
+<p>Extension of the MDR Infotainment application family with the “Sport
+im Osten” component.</p>
+<p><strong>Union Investment — Fonds Online</strong> (06/2010 –
+08/2011)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> Android, Webservices, REST, XML</li>
+<li><strong>Client:</strong> Union Asset Management Holding AG ·
+<strong>Delivery:</strong> paluno, adesso mobile solutions GmbH</li>
+</ul>
+<p>Android app for secure management of securities portfolios via
+encrypted network channels.</p>
+<p><strong>Scan + Pay — PostFinance Banking App</strong> (04/2010 –
+06/2011)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> Android, iOS, Optical Character Recognition
+(OCR)</li>
+<li><strong>Client:</strong> PostFinance · <strong>Delivery:</strong>
+paluno, adesso mobile solutions GmbH</li>
+</ul>
+<p>Implementation of an OCR module for recognizing bank transfer data
+from payment slips with reference numbers (ESR) for iOS and Android.</p>
+<p><strong>MDR Jump</strong> (11/2010 – 04/2011)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> BlackBerry, Android, Java, iOS, HTTP, XML,
+RTSP, GPS, audio streaming, video streaming</li>
+<li><strong>Client:</strong> Mitteldeutscher Rundfunk (MDR) ·
+<strong>Delivery:</strong> paluno, itCampus Systemhaus GmbH</li>
+</ul>
+<p>Porting of an iOS infotainment application family to the Android and
+BlackBerry platforms.</p>
+<p><strong>Audi of America — Mobile Sales Information</strong> (07/2010
+– 08/2010)</p>
+<ul>
+<li><strong>Type:</strong> Development project · <strong>Role:</strong>
+Project Lead</li>
+<li><strong>Tech:</strong> BlackBerry, Java, PHP, JSON, MySQL</li>
+<li><strong>Client:</strong> Audi of America ·
+<strong>Delivery:</strong> paluno, itCampus Systemhaus GmbH</li>
+</ul>
+<p>BlackBerry app for synchronization and visualization of daily updated
+sales figures over 3G/WiFi.</p>
+<p><strong>ProBaTe-Web — Business Process Based Testing</strong>
+(11/2009 – 06/2010)</p>
+<ul>
+<li><strong>Type:</strong> Development / Research project ·
+<strong>Role:</strong> Team member</li>
+<li><strong>Tech:</strong> Eclipse, Java, ATL, MySQL</li>
+<li><strong>Delivery:</strong> Chair of Applied Telematics/e-Business,
+University of Leipzig; paluno; itCampus</li>
+</ul>
+<p>Development of a testing tool for generating and automatically
+executing test cases for web applications derived from process
+specifications.</p>
+<p><strong>End User Programming — “From Domain Knowledge to
+Software”</strong> (10/2009 – 03/2010)</p>
+<ul>
+<li><strong>Type:</strong> Research project · <strong>Role:</strong>
+Team member</li>
+<li><strong>Delivery:</strong> Chair of Applied Telematics/e-Business,
+University of Leipzig</li>
+</ul>
+<p>Research into innovations for efficient development of
+domain-specific information systems: early involvement of domain experts
+in the design process and largely automated software generation from
+design specifications.</p>
+<p><strong>MoRIA — Mobile Rich Internet Applications</strong> (04/2009 –
+08/2009)</p>
+<ul>
+<li><strong>Type:</strong> Research project · <strong>Role:</strong>
+Team member</li>
+<li><strong>Partners:</strong> Deutsche Telekom Laboratories, University
+of Leipzig</li>
+<li><strong>Delivery:</strong> Chair of Applied Telematics/e-Business,
+University of Leipzig</li>
+</ul>
+<p>Research and development of a reference architecture for implementing
+Rich Internet Applications on mobile devices.</p>
+<p><strong>Mobile Code (MobCo) — Adaptive Architectures for Mobile
+Applications</strong> (01/2007 – 12/2008)</p>
+<ul>
+<li><strong>Type:</strong> Research project · <strong>Role:</strong>
+Team member</li>
+<li><strong>Tech:</strong> Java, Java ME, OSGi, R-OSGi, db4o</li>
+<li><strong>Partners:</strong> Deutsche Telekom Laboratories, University
+of Leipzig</li>
+<li><strong>Delivery:</strong> Chair of Applied Telematics/e-Business,
+University of Leipzig</li>
+</ul>
+<p>Development of a middleware for creating and operating adaptive
+mobile applications in collaboration with Deutsche Telekom
+Laboratories.</p>
+<h2 id="teaching">Teaching</h2>
+<p><strong>University of Duisburg-Essen</strong> (2011 – 2016)</p>
+<p><em>Lectures:</em></p>
+<ul>
+<li>Software Engineering for Mobile Systems (2012–2016) — designed,
+planned, and delivered; accompanying seminar</li>
+<li>Models in Computer Science (2013–2015) — modelling paradigms, formal
+languages, logic, graphs, UML</li>
+<li>Specification Languages (2011)</li>
+<li>Project Seminar Software Engineering (2011–2015)</li>
+</ul>
+<p><em>Supervision of theses</em> (selection, 2012–2016):</p>
+<ul>
+<li>Indoor localization with BLE beacons (BA 2016)</li>
+<li>Conceptual Gamification of Software — CGS model (BA 2015)</li>
+<li>Continuous location tracking and geofencing in Android apps (BA
+2015)</li>
+<li>Test automation for sensor-based mobile applications with
+Calabash-Android (BA 2014)</li>
+<li>Toolkit for automated testing of sensor-based Android apps (MA
+2013)</li>
+</ul>
+<p><strong>University of Leipzig</strong> (2009 – 2010)</p>
+<ul>
+<li>Selected Topics in Software Engineering — lecture support and
+seminar delivery</li>
+</ul>
+<h2 id="publications">Publications</h2>
+<ul>
+<li>Griebe, T., Hesenius, M., Gsethüsen, M., Gruhn, V.: <em>Test
+Automation for Speech-Based Applications.</em> SoMeT_16, IOS Press (New
+Trends in Software Methodologies, Tools and Techniques, vol. 286),
+pp. 85.</li>
+<li>Griebe, T., Hesenius, M., Gruhn, V.: <em>Towards Automated UI-Tests
+for Sensor-based Mobile Applications.</em> SoMeT_15, Springer,
+pp. 3–17.</li>
+<li>Hesenius, M., Griebe, T., Gries, S., Gruhn, V.: <em>Automating UI
+Tests for Mobile Applications with Formal Gesture Descriptions.</em>
+MobileHCI ’14, ACM. DOI: 10.1145/2628363.2628391</li>
+<li>Hesenius, M., Griebe, T., Gruhn, V.: <em>Towards a Behavior-Oriented
+Specification Language for Multimodal, Interactive Applications.</em>
+EICS 2014, ACM.</li>
+<li>Griebe, T., Gruhn, V.: <em>A Model-Based Approach to Test Automation
+for Context-Aware Mobile Applications.</em> SAC 2014 (29th Symposium on
+Applied Computing).</li>
+<li>Shrestha, A., Biel, B., Griebe, T., Gruhn, V.: <em>A Framework for
+Building and Operating Context-Aware Mobile Applications.</em> Mobilware
+2012, Springer LNICST 93, pp. 135–142. DOI:
+10.1007/978-3-642-30607-5_13</li>
+<li>Heinecke, A., Brückmann, T., Griebe, T., Gruhn, V.: <em>Generating
+Test Plans for Acceptance Tests from UML Activity Diagrams.</em> ECBS
+2010, IEEE, pp. 57–66. DOI: 10.1109/ECBS.2010.14</li>
+<li>Heinecke, A., Griebe, T., Gruhn, V., Flemig, H.: <em>Business
+Process-Based Testing of Web Applications.</em> BPM Workshop 2010.</li>
+</ul>
+<h2 id="community-service">Community Service</h2>
+<dl>
+<dt>2001 – 2002</dt>
+<dd>
+<strong>Community Service</strong> — Schule am Amselsteg, Special
+Educational School, 15366 Neuenhagen
+</dd>
+</dl>
+</div>
+
+</body>
+</html>

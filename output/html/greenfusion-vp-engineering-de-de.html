@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Tobias Griebe</title>
+  <style>
+    /* ── Page setup ── */
+    @page {
+      size: A4;
+      margin: 20mm 22mm 20mm 22mm;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 9.5pt;
+      color: #111;
+      background: white;
+    }
+
+    /* ── Header ── */
+    header {
+      padding-bottom: 14px;
+      border-bottom: 2px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-name {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 22pt;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 1.1;
+      color: #111;
+    }
+
+    .header-subtitle {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .header-contact {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      color: #444;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .header-contact a { color: #222; text-decoration: none; }
+
+    .portrait {
+      width: 3.0cm;
+      height: 3.6cm;
+      object-fit: cover;
+      object-position: center 10%;
+      border: 1px solid #ccc;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Body content ── */
+    .body-content {
+      padding-top: 16px;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #222;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 3px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    /* ── Definition lists ── */
+    dl { margin: 0; }
+
+    dt {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      color: #666;
+      float: left;
+      clear: left;
+      width: 128px;
+      padding-right: 10px;
+      padding-top: 2px;
+      line-height: 1.45;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    dd {
+      margin-left: 140px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    dd p {
+      font-size: 9pt;
+      line-height: 1.5;
+      color: #111;
+      margin-bottom: 3px;
+    }
+
+    dd p:first-child strong {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 10pt;
+      color: #000;
+    }
+
+    dd ul {
+      margin: 4px 0 0;
+      padding-left: 15px;
+    }
+
+    dd li {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8.5pt;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 1px;
+    }
+
+    /* ── Skill blocks ── */
+    .body-content > p {
+      font-size: 9pt;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 7px;
+    }
+
+    .body-content > p > strong:first-child {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 8pt;
+      display: block;
+      color: #111;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    /* ── Bullet lists ── */
+    .body-content > ul {
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+
+    .body-content > ul li {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 9pt;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 2px;
+    }
+
+    /* ── Subsection headers within experience entries ── */
+    dd h4 {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: 7pt;
+      color: #111;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-top: 14px;
+      margin-bottom: 1px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    dd h4:first-child {
+      margin-top: 0;
+    }
+
+    /* ── Links ── */
+    a { color: #111; }
+
+    /* ── Misc ── */
+    em { font-style: italic; }
+    strong { font-weight: 700; }
+
+    /* ── Page break helpers ── */
+    h2 { page-break-after: avoid; break-after: avoid; }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-text">
+    <div class="header-name">Dr. Tobias Griebe</div>
+    <div class="header-subtitle">VP Engineering · Engineering-Organisation · Plattformtransformation</div>
+
+    <div class="header-contact">Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com</div>
+
+  </div>
+  <img src="/Users/tobiasgriebe/private/resume/portrait2.jpg" class="portrait" alt="Dr. Tobias Griebe">
+
+</header>
+
+<div class="body-content">
+<h2 id="executive-profil">Executive Profil</h2>
+<div class="executive-summary">
+<p><em>Promovierter Informatiker (Dr. rer. nat., summa cum laude) und
+erfahrene IT-Führungspersönlichkeit mit über 15 Jahren progressiver
+Leitungsverantwortung in technologiegetriebenen Unternehmen
+unterschiedlicher Reifestufen. Ich verbinde eine ausgeprägte
+Engineering-DNA in Softwarearchitektur, Cloud-Plattformen, DevOps und
+API-Ökosystemen mit nachhaltiger Personalführung und strategischem
+IT-Management. Meine Stärke liegt darin, IT-Transformation nicht als
+Selbstzweck zu betreiben, sondern als messbaren Hebel für
+Unternehmenswachstum, Betriebsstabilität und Innovationsfähigkeit. Ich
+führe IT-Organisationen vom Teamaufbau über die Zielarchitektur bis zur
+Governance und kommuniziere dabei souverän auf C-Level sowie gegenüber
+interdisziplinären Stakeholdern.</em></p>
+</div>
+<h2 id="kernkompetenzen">Kernkompetenzen</h2>
+<div class="core-competencies-3col">
+<p><strong>IT-STRATEGIE &amp; ARCHITEKTUR</strong> Cloud-first /
+API-first Zielarchitekturen · Enterprise Architecture · IT-Roadmaps
+&amp; OKRs · Microservices &amp; Plattformstrategie · Modernisierung von
+Applikationslandschaften · Technical Debt Management</p>
+<p><strong>FÜHRUNG &amp; ORGANISATION</strong> Disziplinarische Führung
+bis 50+ Personen · Engineering Manager Coaching · Karriere-Framework
+&amp; Performance-Management · Organizational Design · Recruiting &amp;
+Retention · Agile Governance &amp; Value Streams</p>
+<p><strong>IT-MANAGEMENT &amp; GOVERNANCE</strong> Budget- &amp;
+Investitionsplanung (€1–5M) · Portfolio- &amp; Projektpriorisierung ·
+Make-or-Buy-Entscheidungen · Provider- &amp; Vertragsmanagement ·
+Compliance-konforme Infrastruktur (DSGVO) · Audit-Readiness</p>
+<p><strong>TECHNOLOGIE &amp; BETRIEB</strong> AWS · Kubernetes / Docker
+· Red Hat OpenShift · Spring Boot / Kotlin / Java · TypeScript / React /
+Node.js · DevOps · CI/CD · Incident- &amp; Change-Management</p>
+<p><strong>DIGITALE TRANSFORMATION</strong> Agile Transformation (Scrum,
+Kanban) · Cloud-Migration &amp; Modernisierung · Mobile Plattformen
+(iOS, Android, Flutter) · B2B/B2E Product Engineering · Requirements
+Engineering &amp; Solution Design</p>
+<p><strong>KOMMUNIKATION &amp; STAKEHOLDER</strong> C-Level- &amp;
+Geschäftsführungs-Reporting · Konzernsteuerung &amp; Konzernabstimmung ·
+Kundenakquise &amp; Delivery · Cross-funktionale Teamsteuerung · Externe
+Partnersteuerung</p>
+</div>
+<h2 id="berufstätigkeit">Berufstätigkeit</h2>
+<dl>
+<dt>seit 12/2025</dt>
+<dd>
+<p><strong>Head of Consulting</strong> — Cloudfactory GmbH</p>
+<h4 id="mandat-50hertz-transmission-gmbh-elia-group">MANDAT: 50HERTZ
+TRANSMISSION GMBH / ELIA GROUP</h4>
+<p>Strategisches Beratungs- und Führungsmandat bei <strong>50Hertz
+Transmission GmbH / Elia Group</strong>, einem der führenden
+europäischen Übertragungsnetzbetreiber. Das Mandat umfasst zwei
+parallele Verantwortungsbereiche:</p>
+<p><strong>Product Line Product Management Lead</strong> — Verantwortung
+für Produktstrategie, Roadmap-Management und Produktspezifikationen
+einer Produktlinie aus vier technischen Plattformprodukten im Rahmen
+einer souveränen Cloud-Plattform für einen DAX-Konzern: <em>Internal
+Developer Portal</em> (Self-Service-UI für Cloud-Ressourcen und
+Zugriffsrechte im Multi-Tenant-Betriebsmodell), <em>CI/CD &amp; Supply
+Chain Security Platform</em> (SCM, CI/CD und Software Supply Chain
+Security), <em>Sovereign Artefact Registry</em> (souveränes
+Artefakt-Management, Abschirmung der Plattform gegenüber externen
+Drittanbietern) sowie <em>Release Promotion Service</em> (sichere
+Steuerung von Applikations-Deployments zwischen air-gapped
+Ausführungsumgebungen). Mitglied des erweiterten
+Programm-Führungskreises; Berichtslinie an das Programm-Management-Board
+einschließlich CIO-Bereich. Ergebnisse: veröffentlichtes Product Line
+Portfolio, vier vollständige Produktspezifikationen, vier gestartete
+Plattformprodukte, etablierter Produktmanagement-Prozess innerhalb der
+Produktlinie.</p>
+<p><strong>Platform Engineering Lead</strong> — Konzeption der
+übergreifenden Plattformstrategie, Steuerung der Delivery und
+Kommunikation auf Führungsebene beim Kunden. Schwerpunkte: Cloud-native
+Developer Platforms, Platform Engineering, DevOps-Organisationsmodelle
+und skalierbare Delivery-Strukturen im regulierten
+Infrastruktursektor.</p>
+<h4 id="ki-integration-developer-velocity">KI-INTEGRATION &amp;
+DEVELOPER VELOCITY</h4>
+<p>Kernbestandteil der Plattformstrategie ist die Gestaltung von
+Developer-Tooling-Ökosystemen, die interne Entwicklungszyklen nachhaltig
+beschleunigen. Dies umfasst die Integration KI-gestützter
+Entwicklungsassistenz, die Automatisierung von Test- und
+Deployment-Pipelines sowie den Aufbau von
+Self-Service-Plattformkapazitäten, die Entwicklerteams unabhängig von
+zentralen Infrastrukturengpässen machen.</p>
+</dd>
+<dt>02/2023 – 11/2025</dt>
+<dd>
+<p><strong>Engineering Director</strong> — sevDesk GmbH, Offenburg</p>
+<h4 id="aufgaben-ergebnisse">AUFGABEN &amp; ERGEBNISSE</h4>
+<p>Als Engineering Director verantwortet Dr. Griebe zwei der drei Säulen
+der sevDesk-R&amp;D-Organisation: Platform Engineering und Growth &amp;
+Retention. Als einer der führenden deutschen Cloud-Accounting-Anbieter
+im KMU-Segment wächst sevDesk mit hoher Geschwindigkeit; beide Bereiche
+sind strategisch unmittelbar daran beteiligt. Er steuert Roadmap,
+technische Vision und Architekturstrategie über beide
+Verantwortungsbereiche hinweg und verantwortet das Headcount- sowie
+Einstellungsbudget in enger Abstimmung mit der Geschäftsführung. Ein
+zentrales Ergebnis seiner Amtszeit ist die Initiierung und Steuerung
+eines unternehmensweiten Applikationsmodernisierungsprogramms, das die
+gewachsene Produktlandschaft auf eine Cloud-native, containerisierte
+Zielarchitektur (Kubernetes/Docker auf AWS) überführt. Die technische
+Roadmap wird im OKR-Framework abgestimmt und in messbaren Quarterly
+Goals operationalisiert.</p>
+<h4 id="führung-organisationsentwicklung">FÜHRUNG &amp;
+ORGANISATIONSENTWICKLUNG</h4>
+<p>Dr. Griebe führt disziplinarisch 6 Engineering Manager und ist damit
+indirekt für über 40 Softwareentwickler in Product-Feature-Teams und
+Cloud-Infrastruktur-Teams verantwortlich. Ein zentraler Schwerpunkt lag
+in der strategischen Ausgestaltung des Platform-Engineering-Pillars als
+eigenständige Einheit innerhalb der R&amp;D-Organisation, einschließlich
+der vollständigen Steuerung des Einstellungsprozesses für eine
+dedizierte Engineering-Director-Position. Er hat ein unternehmensweites
+Karriere-Framework und Performance-Management-System etabliert, das
+strukturierte Entwicklungspfade, transparente Bewertungskriterien und
+eine leistungsorientierte Feedbackkultur schafft.</p>
+<h4 id="ki-integration-developer-velocity-1">KI-INTEGRATION &amp;
+DEVELOPER VELOCITY</h4>
+<p>Unter Dr. Griebes Leitung wurde ein strategisches
+Shift-and-Lift-Programm der gesamten Entwicklungsinfrastruktur von
+GitLab nach GitHub durchgeführt. Das Programm umfasste die vollständige
+Transformation der CI/CD-Pipelines und Automatisierungslandschaft unter
+einem konsequenten DevSecOps-Ansatz: Security-Scanning,
+Dependency-Auditing und Compliance-Checks sind seither als integraler
+Bestandteil jeder Delivery-Pipeline verankert. Die Migration auf GitHub
+Actions schafft zugleich die technische Grundlage für die gezielte
+Integration KI-gestützter Entwicklungstools und automatisierter
+Code-Quality-Pipelines.</p>
+<h4 id="technologie-methoden-governance">TECHNOLOGIE, METHODEN &amp;
+GOVERNANCE</h4>
+<p>Der Produktstack umfasst Spring Boot/Kotlin, PHP und React; die
+Plattforminfrastruktur basiert auf Docker und Kubernetes in AWS.
+Dr. Griebe etablierte architekturelle Standards und API-first-Prinzipien
+sowie Architecture Decision Records (ADRs) als Governance-Instrument.
+Delivery-Qualität und -Geschwindigkeit werden anhand von
+<strong>DORA-Metriken</strong> (Deployment Frequency, Lead Time, Change
+Failure Rate, MTTR) gemessen und als Steuerungsinstrument in Quarterly
+Reviews eingesetzt. Die Compliance-konforme Cloud-Infrastruktur
+berücksichtigt explizit die Anforderungen der GoBD. Observability wird
+durch Datadog, New Relic und PagerDuty sichergestellt; On-Call-Programme
+und Incident-Management-Prozesse sind fest etabliert.</p>
+</dd>
+<dt>04/2021 – 01/2023</dt>
+<dd>
+<p><strong>Head of Software Development and Platform
+Architecture</strong> — Würth Cloud Services GmbH, Bad Mergentheim</p>
+<h4 id="aufgaben-ergebnisse-1">AUFGABEN &amp; ERGEBNISSE</h4>
+<p>Bei Würth Cloud Services verantwortete Dr. Griebe sowohl die
+Modernisierung bestehender Legacysysteme als auch den parallelen Aufbau
+neuer Plattformkomponenten — in einem Umfeld, das die IT-Governance
+eines DAX-nahen Konzerns mit der Veränderungsgeschwindigkeit eines
+Startups verbindet. Die Zielgruppe der Systemlandschaft waren kleine und
+mittelständische Handwerksbetriebe; die Plattform integrierte mobile und
+stationäre Applikationen in einer skalierbaren Cloud-Umgebung.
+Definition der Zielarchitektur, Priorisierung des
+Modernisierungsportfolios nach Business Value sowie die Steuerung von
+Betrieb und Weiterentwicklung lagen in seiner alleinigen Verantwortung,
+einschließlich Headcount- und Investitionsbudgetsteuerung in enger
+Abstimmung mit der Würth IT und dem Konzernvorstand.</p>
+<h4 id="führung-organisationsentwicklung-1">FÜHRUNG &amp;
+ORGANISATIONSENTWICKLUNG</h4>
+<p>Dr. Griebe baute das Engineering-Team von Grund auf auf und steuerte
+Frontend- und Backend-Entwickler sowie Mobile-Engineers im vollständigen
+Mitarbeiterlebenszyklus: von Recruiting und Onboarding über
+Qualifikation und Laufbahnentwicklung bis zu gezielten
+Retention-Maßnahmen. Im konzerngestützten Startup-Kontext etablierte er
+eine Führungskultur, die technische Exzellenz mit unternehmerischem
+Denken und Eigenverantwortung verbindet. Die disziplinarische und
+fachliche Führung erstreckte sich über cross-funktionale Teams und
+erforderte Kommunikation sowohl in die Konzernstrukturen der Würth
+Gruppe als auch gegenüber externen Entwicklungspartnern.</p>
+<h4 id="technologie-methoden-governance-1">TECHNOLOGIE, METHODEN &amp;
+GOVERNANCE</h4>
+<p>Die Plattformarchitektur basierte auf Red Hat OpenShift im
+Würth-Konzernrechenzentrum, ergänzt durch Docker und Kubernetes für
+Container-Orchestrierung; der Produktstack umfasste PHP,
+TypeScript/JavaScript, Node.js, Java, Spring Boot, React und Flutter.
+Architekturentscheidungen wurden im Einklang mit den IT-Governance- und
+Sicherheitsstandards des Würth-Konzerns getroffen und dokumentiert.
+Betrieb, Monitoring und Incident-Management lagen in der Verantwortung
+des Teams; die Integration in die Würth-IT-Infrastruktur erforderte
+strukturierte Change-Management-Prozesse und regelmäßiges Reporting auf
+Konzernebene.</p>
+</dd>
+<dt>11/2017 – 08/2019</dt>
+<dd>
+<p><strong>Leiter Competence Center Digitalisierungsberatung</strong> —
+adesso SE, Dortmund</p>
+<h4 id="aufgaben-ergebnisse-2">AUFGABEN &amp; ERGEBNISSE</h4>
+<p>Als Leiter des Competence Centers Digitalisierungsberatung
+verantwortete Dr. Griebe den strategischen Aufbau und die eigenständige
+Steuerung eines profitablen Beratungsbereichs bei einem der führenden
+deutschen IT-Dienstleister. Er akquirierte und lieferte
+IT-Transformationsprojekte bei Enterprise-Kunden mit einem
+Projektvolumen von 1–5 Mio. EUR, von der initialen Bedarfsanalyse und
+Fit/Gap-Analyse über Make-or-Buy-Entscheidungen bis zur Delivery
+komplexer Cloud-nativer Architekturen. Der Bereich wurde als
+eigenständige Profit-Center-Einheit mit nachweislichem Wachstum im
+Neukundengeschäft etabliert, mit Kundenbranchen aus dem Finanz- und
+Versicherungssektor.</p>
+<h4 id="führung-organisationsentwicklung-2">FÜHRUNG &amp;
+ORGANISATIONSENTWICKLUNG</h4>
+<p>Dr. Griebe baute ein interdisziplinäres Berater- und Entwicklerteam
+von bis zu 20 Personen auf und übernahm disziplinarische sowie fachliche
+Führungsverantwortung im vollständigen Mitarbeiterlebenszyklus. Er
+entwickelte strukturierte Kompetenzpfade, führte regelmäßige Leistungs-
+und Potenzialreviews durch und etablierte systematischen Wissenstransfer
+im Team. Den Einstieg in die Führungsrolle vollzog er als Teamleiter
+(06/2016) und übernahm innerhalb von eineinhalb Jahren die Gesamtleitung
+des Competence Centers (11/2017).</p>
+<h4 id="technologie-methoden-governance-2">TECHNOLOGIE, METHODEN &amp;
+GOVERNANCE</h4>
+<p>Die Beratungsprojekte deckten Cloud-native Architekturen mit
+Microservices, Java Spring Boot, Docker und Kubernetes ab; hinzu kamen
+die Konzeption mobiler Anwendungen sowie die Einführung agiler
+Governance-Modelle (Scrum, Kanban) bei Enterprise-Kunden. Requirements
+Engineering, Solution Design und Architektur-Reviews auf Kundenseite
+waren integraler Bestandteil der Projektrollen. Projektsteuerung und
+Dokumentation erfolgten mit Jira, Confluence und MS-TFS.</p>
+</dd>
+</dl>
+<h2 id="studium">Studium</h2>
+<dl>
+<dt>04/2017</dt>
+<dd>
+<p><strong>Promotion Dr. rer. nat.</strong> — <em>summa cum
+laude</em></p>
+<p>„Methode und Technologie zur modellbasierten Automatisierung von
+Tests kontextsensitiver mobiler Anwendungen”</p>
+</dd>
+<dt>06/2009</dt>
+<dd>
+<p><strong>Diplom Informatik</strong> — Universität Leipzig (10/2002 –
+06/2009)</p>
+<p>Nebenfach Philosophie</p>
+<p>Diplomarbeit: „Generierung von Testplänen aus
+UML-Aktivitätsdiagrammen unter Anwendung von Modelltransformation”</p>
+</dd>
+</dl>
+<h2 id="kenntnisse">Kenntnisse</h2>
+<p><strong>Führung &amp; Personalentwicklung</strong></p>
+<p>Disziplinarische und fachliche Führung technischer Teams auf allen
+Ebenen — von individuellen Entwicklern bis hin zu Engineering Managern.
+Aufbau und Steuerung von Teams im gesamten Lebenszyklus: Recruiting,
+Onboarding, Qualifikation, Laufbahnentwicklung und Retention. Coaching
+und Mentoring von Führungskräften und Mitarbeitern. Evaluation von
+Leistung und Potenzial; zielgerichteter Einsatz von
+Personalentwicklungsinstrumenten. Team-Health-Assessments; Förderung von
+Psychological Safety und Teamzusammenhalt.</p>
+<p><strong>Engineering Management &amp; IT-Governance</strong></p>
+<p>Technische Vision und Roadmap-Verantwortung für mehrere Teams und
+Produkte. IT-Governance: Einführung und Durchsetzung von SAST-Tooling in
+CI/CD-Pipelines (GitLab, GitHub Actions), obligatorisches Tagging von
+Workloads, Security Policies. Observability: Datadog, New Relic,
+PagerDuty, Sentry. On-Call- und Incident-Management-Programme.
+Architekturdokumentation mit Arc42. DORA-Metriken als
+Steuerungsinstrument. Organisationsdesign und Karriere-Frameworks für
+Engineering-Organisationen.</p>
+<p><strong>Agile Methoden &amp; UX</strong></p>
+<p>Scrum, Kanban; agile Transformation und Coaching. Customer Safari,
+Customer Journey, User Story Mapping, Personas, Business Model Canvas,
+Touch-Point-Analyse, Interaction Room. BPMN, UML, EPK, Petri-Netze.
+Projektmanagement: Jira, Confluence.</p>
+<p><strong>Sprachen</strong></p>
+<p>Deutsch (Muttersprache), Englisch (verhandlungssicher)</p>
+<h2 id="zertifizierungen">Zertifizierungen</h2>
+<ul>
+<li>Professional Scrum Product Owner PSPO I (scrum.org)</li>
+<li>Professional Agile Leadership I (scrum.org)</li>
+<li>ISTQB Certified Tester Foundation Level</li>
+<li>Zertifizierte Führungsausbildung PROAKTIV License to Lead</li>
+<li>Interaction-Room-Coach — Foundation Level</li>
+</ul>
+</div>
+
+</body>
+</html>
