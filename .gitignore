@@ -13,6 +13,7 @@
 *.ps
 *.synctex.gz
 *.sb-*
+.DS_Store
 
 # pandoc build output
 _assembled.md
