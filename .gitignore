@@ -18,6 +18,9 @@
 # pandoc build output
 _assembled.md
 
+# Rendered CV/cover-letter output (regenerate with build.py)
+output/
+
 # Profile-generated PDFs (named after profile stems)
 default-de.pdf
 default-en.pdf
