@@ -2,7 +2,7 @@
 **Company:** CKM Group (GreenMedical / telemedicine arm)  
 **Location:** Berlin Friedrichshain-Kreuzberg — hybrid  
 **Team:** 3 engineering teams + 1 infrastructure team + Product/UI/UX team  
-**Date assessed:** 2026-07-15  
+**Date assessed:** 2026-08-18 (first assessed 2026-07-15; posting re-verified against live listing)  
 **Source:** ckm-group.jobs.personio.com (job 2709691)
 
 ---
@@ -16,6 +16,8 @@ Top engineering and product leadership role at CKM Group, a healthcare group com
 ## Overall Fit: HIGH (~75%)
 
 Strong match on leadership model, org design, technical stack, and — critically — the combined Product & Engineering ownership. The current Cloudfactory/50Hertz role includes a Product Line Product Management Lead mandate (strategic steering of 4 technical platform products), which directly evidences product strategy ownership at portfolio level. Tobias currently holds both mandates simultaneously — engineering org leadership and product line PM — making the combined Head of P&E title a description of his present work, not a stretch. Main gate: compensation (no number given).
+
+**Re-verification note (2026-08-18):** Posting has been live for 30+ days without being closed. This typically signals either a high qualification bar (favourable: Tobias's profile is rare) or internal process delays. The role description is unchanged. All tailored CV materials (extended + onepager, DE + EN) are built and ready. DORA metrics are now explicit in the sevDesk section; the Cloudfactory/50Hertz PM mandate is fully represented. No new information changes the fit rating.
 
 ---
 
@@ -99,3 +101,5 @@ Berlin Friedrichshain-Kreuzberg, hybrid. No issue.
 **Strong candidate — gated on salary.** The engineering and product leadership requirements are a strong match. The 50Hertz Product Line PM Lead mandate closes the product strategy gap entirely: Tobias currently holds the combined P&E role this posting describes, just split across two engagements. The narrative is clean and honest. Primary risk is compensation — a founder-owned health group without disclosed VC funding may not clear the salary floor.
 
 Confirm salary range before investing in materials. If base ≥ €140k: **apply with high confidence**. If below €130k: pass.
+
+**Status (2026-08-18):** CV materials are complete and ready to submit. Next step: probe salary via initial contact or recruiter channel before sending full application package.
