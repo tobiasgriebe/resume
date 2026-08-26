@@ -1,0 +1,22 @@
+name: Dr. Tobias Griebe
+subtitle: "Chief Technology Officer · AI-Driven Engineering · Platform & Delivery Excellence"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+lang: en
+
+sections:
+  - summary-cto
+  - core-competencies-cto
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+        - durstexpress-lead-pm
+        - adesso-head-cc
+  - education:
+      include: [phd, diplom]
+  - skills:
+      include: [leadership, engineering-management, technologies-cloud, technologies-backend, agile-methods, languages]
+  - certifications

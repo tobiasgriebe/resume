@@ -9,6 +9,8 @@ Dates without a tracked application date use the status/file date as approximati
 
 | Date | Company | Role | Status |
 |------|---------|------|--------|
+| 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer | Applied (recruiter search, company withheld) |
+| 2026-08-18 | CKM Group (GreenMedical) | Head of Product & Engineering | Materials ready (salary gate) |
 | 2026-07-20 | Alpega Group | Vice President Software Engineering (Group) | Applied |
 | 2026-06-20 | Green Fusion | VP Engineering | Applied |
 | 2026-06-01 | DKB | Chapter Lead Engineering Management | Applied |

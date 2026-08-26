@@ -280,6 +280,8 @@
 
     /* ── Page break helpers ── */
     h2 { page-break-after: avoid; break-after: avoid; }
+    h2 + dl { page-break-before: avoid; break-before: avoid; }
+    dd > p:first-child { page-break-after: avoid; break-after: avoid; }
 
 $if(compact)$
     /* ── Compact overrides (onepager) ── */
