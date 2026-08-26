@@ -15,6 +15,10 @@
 *.sb-*
 .DS_Store
 
+# Python bytecode
+__pycache__/
+*.pyc
+
 # pandoc build output
 _assembled.md
 
