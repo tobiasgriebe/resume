@@ -2,30 +2,34 @@
 ## Executive Profile
 
 ::: {.executive-summary}
-*PhD computer scientist (Dr. rer. nat., summa cum laude) and seasoned IT leader with over 15 years of progressive management responsibility in technology-driven organisations at varying stages of maturity. I combine deep engineering expertise in software architecture, cloud platforms, DevOps and API ecosystems with sustainable people leadership and strategic IT management. My strength lies in driving IT transformation not as an end in itself, but as a measurable lever for business growth, operational stability and innovation capacity. I lead IT organisations from team-building through target architecture to governance, communicating confidently at C-level and with cross-functional stakeholders.*
+*PhD computer scientist who has stayed technically active through every stage of his career — from software developer and technical team lead at adesso, through independent architecture ownership at Würth Cloud Services, to full responsibility for two engineering pillars as Engineering Director at sevDesk. Architecture decisions, code reviews, and technical standards were personal responsibilities at each stage, not delegated tasks.*
+
+*AI-driven software development is not a talking point for me — it is my current work. At 50Hertz Transmission GmbH, as Product Line Product Management Lead, I own strategy, roadmap, and launch of technical platform products at programme level for a DAX-listed company: an Internal Developer Portal, a CI/CD & Supply Chain Security Platform, and a sovereign artefact registry — live, in production, with documented outcomes. The underlying mandate is exactly what this role describes: making engineering teams faster and more autonomous through platform and tooling decisions.*
+
+*At sevDesk GmbH I built the engineering organisation structurally: DORA metrics as binding steering instruments, cloud-native target architecture on AWS/Kubernetes, company-wide career framework. The combination of technical depth, organisational design, and direct executive reporting is my working environment — and the natural next step is full CTO ownership.*
 :::
 
 
-## Core Competencies
+## Core-Competencies-Cto
 
 ::: {.core-competencies-3col}
-**IT STRATEGY & ARCHITECTURE**
-Cloud-first / API-first target architectures · Enterprise Architecture · IT roadmaps & OKRs · Microservices & platform strategy · Application landscape modernisation · Technical debt management
+**AI TRANSFORMATION & DEVELOPER VELOCITY**
+AI-driven software development cycle · LLM tool strategy & make-or-buy · AI enablement for business units · Security & permissions concepts for AI applications · DORA metrics as steering instrument · Developer experience & self-service platforms
 
-**LEADERSHIP & ORGANISATION**
-Disciplinary leadership of 50+ people · Engineering Manager coaching · Career framework & performance management · Organisational design · Recruiting & retention · Agile governance & value streams
+**PLATFORM & ARCHITECTURE STRATEGY**
+Cloud-first / API-first target architectures · Microservices & platform engineering · AWS · Kubernetes / Docker · Red Hat OpenShift · DevSecOps & CI/CD · Observability (Datadog, New Relic, PagerDuty) · Technical debt management
+
+**ENGINEERING ORGANISATION & LEADERSHIP**
+Full responsibility for engineering organisations · Disciplinary leadership of 50+ people · Engineering Manager coaching · Career framework & performance management · Senior & leadership-level recruiting · Agile governance
 
 **IT MANAGEMENT & GOVERNANCE**
-Budget & investment planning (€1–5M) · Portfolio & project prioritisation · Make-or-buy decisions · Vendor & contract management · GDPR-compliant infrastructure · Audit-readiness
+Budget & investment planning (€1–5M) · Portfolio prioritisation & OKRs · Make-or-buy decisions · Vendor & contract management · GDPR / GoBD-compliant infrastructure · Audit-readiness
 
-**TECHNOLOGY & OPERATIONS**
-AWS · Kubernetes / Docker · Red Hat OpenShift · Spring Boot / Kotlin / Java · TypeScript / React / Node.js · DevOps · CI/CD · Incident & change management
+**PRODUCT ENGINEERING & DELIVERY**
+Roadmap management at programme level · Product strategy & discovery · Technical product specifications · C-level stakeholder alignment · Cloud-native application modernisation
 
-**DIGITAL TRANSFORMATION**
-Agile transformation (Scrum, Kanban) · Cloud migration & modernisation · Mobile platforms (iOS, Android, Flutter) · B2B/B2E product engineering · Requirements engineering & solution design
-
-**COMMUNICATION & STAKEHOLDERS**
-C-level & executive reporting · Corporate governance & alignment · Client acquisition & delivery · Cross-functional team leadership · External partner management
+**BUSINESS-TECHNOLOGY TRANSLATION**
+Technology reporting at executive level · Economic framing of technology decisions · Corporate governance & alignment · Cross-functional team leadership · German / English (business fluent)
 :::
 
 
@@ -126,6 +130,14 @@ Disciplinary and functional leadership of technical teams at all levels — from
 **Engineering Management & IT Governance**
 
 Technical vision and roadmap ownership across multiple teams and products. IT governance: rollout of SAST tooling in CI/CD pipelines (GitLab, GitHub Actions), mandatory workload tagging, security policies. Observability: Datadog, New Relic, PagerDuty, Sentry. On-call and incident management programs. Architecture documentation with Arc42. DORA metrics as a steering instrument. Organizational design and career frameworks for engineering organizations.
+
+**Cloud & Infrastructure**
+
+Kubernetes, Docker; AWS, Google Cloud Platform, Red Hat OpenShift. Microservice architectures; event-driven architecture; CI/CD pipelines (GitLab, GitHub Actions, Jenkins, TeamCity). SAST tooling, SonarQube. Subversion, Git.
+
+**Backend Development**
+
+Java/Kotlin, Spring Boot; PHP; MySQL, PostgreSQL, MongoDB. REST, JSON, XML. JUnit, Robotium, Calabash, Cucumber. PlantUML, UML modelling. Eclipse, IntelliJ IDEA.
 
 **Agile Methods & UX**
 

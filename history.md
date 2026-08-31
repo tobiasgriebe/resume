@@ -7,20 +7,20 @@ Dates without a tracked application date use the status/file date as approximati
 
 ## 2026
 
-| Date | Company | Role | Status |
-|------|---------|------|--------|
-| 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer | Applied (recruiter search, company withheld) |
-| 2026-08-18 | CKM Group (GreenMedical) | Head of Product & Engineering | Materials ready (salary gate) |
-| 2026-07-20 | Alpega Group | Vice President Software Engineering (Group) | Applied |
-| 2026-06-20 | Green Fusion | VP Engineering | Applied |
-| 2026-06-01 | DKB | Chapter Lead Engineering Management | Applied |
-| 2026-04-20 | MD-IT GmbH | Head of Engineering | Rejected (other panel members vetoed strong candidate) |
-| 2026-04-20 | ETERNO | CTO | Rejected |
-| 2026-04-20 | MAM Gruppe | Director of Software Engineering | Applied |
-| 2026-04-20 | recare | Head of Engineering | Applied |
-| 2026-04-20 | pipedrive | Director of R&D Portfolio and Operations Management | Rejected |
-| ~ | BVV | Head of Engineering | Active |
-| ~ | Quality Group | Head of Engineering | Rejected |
+| Date       | Company                                  | Role                                                | Status                                                 |
+| ---------- | ---------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer                            | Applied (recruiter search, company withheld)           |
+| 2026-08-18 | CKM Group (GreenMedical)                 | Head of Product & Engineering                       | Rejected, position closed                              |
+| 2026-07-20 | Alpega Group                             | Vice President Software Engineering (Group)         | Applied                                                |
+| 2026-06-20 | Green Fusion                             | VP Engineering                                      | Applied                                                |
+| 2026-06-01 | DKB                                      | Chapter Lead Engineering Management                 | Applied                                                |
+| 2026-04-20 | MD-IT GmbH                               | Head of Engineering                                 | Rejected (other panel members vetoed strong candidate) |
+| 2026-04-20 | ETERNO                                   | CTO                                                 | Rejected                                               |
+| 2026-04-20 | MAM Gruppe                               | Director of Software Engineering                    | Applied                                                |
+| 2026-04-20 | recare                                   | Head of Engineering                                 | Applied                                                |
+| 2026-04-20 | pipedrive                                | Director of R&D Portfolio and Operations Management | Rejected                                               |
+| ~          | BVV                                      | Head of Engineering                                 | Active                                                 |
+| ~          | Quality Group                            | Head of Engineering                                 | Rejected                                               |
 
 ---
 
