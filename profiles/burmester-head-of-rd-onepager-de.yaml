@@ -1,0 +1,21 @@
+name: Dr. Tobias Griebe
+subtitle: "Head of R&D · Technologiestrategie · Engineering-Exzellenz · Innovative Produktentwicklung"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+lang: de
+compact: true
+experience_compact: true
+
+sections:
+  - core-competencies-rd
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+  - education:
+      include: [phd]
+  - skills:
+      include: [languages]
+  - certifications

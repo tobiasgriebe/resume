@@ -9,6 +9,7 @@ Dates without a tracked application date use the status/file date as approximati
 
 | Date       | Company                                  | Role                                                | Status                                                 |
 | ---------- | ---------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| 2026-09-18 | Burmester Audiosysteme GmbH              | Head of R&D                                         | Applied                                                |
 | 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer                            | Applied (recruiter search, company withheld)           |
 | 2026-08-18 | CKM Group (GreenMedical)                 | Head of Product & Engineering                       | Rejected, position closed                              |
 | 2026-07-20 | Alpega Group                             | Vice President Software Engineering (Group)         | Applied                                                |
