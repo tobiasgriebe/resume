@@ -248,6 +248,60 @@ def determine_langs(profile: dict, lang_override: Optional[str]) -> list[str]:
     return ["de", "en"]
 
 
+def build_letter(
+    letter_path: Path,
+    output_path: Optional[Path] = None,
+    html_only: bool = False,
+) -> None:
+    """Build a standalone cover letter from a .md file with YAML frontmatter."""
+    print(f"Letter: {letter_path.name}")
+    text = letter_path.read_text(encoding="utf-8")
+    m = re.match(r"^---\n(.*?)\n---\n", text, re.DOTALL)
+    if not m:
+        sys.exit("Cover letter has no YAML frontmatter")
+    fm = yaml.safe_load(m.group(1))
+    lang = fm.get("lang", "en")
+    template_name = fm.get("template", "cover-letter.html")
+    template = TEMPLATES_DIR / template_name
+    if not template.exists():
+        sys.exit(f"Template not found: {template}")
+
+    stem = letter_path.stem
+    today = date.today().strftime("%Y-%m-%d")
+    if output_path:
+        pdf_path = output_path
+        html_path = HTML_DIR / f"{output_path.stem}.html"
+        latest_path = None
+    else:
+        base = f"{stem}"
+        pdf_path = PDF_DIR / f"{base}_{today}.pdf"
+        html_path = HTML_DIR / f"{base}.html"
+        latest_path = PDF_DIR / f"{base}_latest.pdf"
+
+    HTML_DIR.mkdir(parents=True, exist_ok=True)
+    cmd = [
+        "pandoc",
+        str(letter_path),
+        "--to=html5",
+        f"--template={template}",
+        "--standalone",
+        f"--variable=lang:{lang}",
+        "-o", str(html_path),
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(BASE_DIR))
+    if result.returncode != 0:
+        print(result.stderr, file=sys.stderr)
+        sys.exit(f"pandoc failed (exit {result.returncode})")
+    print(f"  HTML → output/html/{html_path.name}")
+
+    if not html_only:
+        render_pdf(html_path, pdf_path)
+        if latest_path:
+            shutil.copy2(pdf_path, latest_path)
+            print(f"  copy → output/pdf/{latest_path.name}")
+    print("Done.")
+
+
 def build(
     profile_path: Path,
     output_path: Optional[Path] = None,
@@ -309,4 +363,7 @@ if __name__ == "__main__":
         if not a.startswith("--") and a not in ("de", "en"):
             output_arg = Path(a)
 
-    build(profile_arg, output_arg, html_only=html_only_flag, lang_override=lang_flag)
+    if profile_arg.suffix == ".md":
+        build_letter(profile_arg, output_arg, html_only=html_only_flag)
+    else:
+        build(profile_arg, output_arg, html_only=html_only_flag, lang_override=lang_flag)

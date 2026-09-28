@@ -1,0 +1,22 @@
+name: Dr. Tobias Griebe
+subtitle: "Director Engineering · B2B SaaS · Scaling Engineering Organisations · Commercial Platform Delivery"
+contact: "Goethestraße 10 · 15345 Eggersdorf · 0159 06303187 · griebe.tobias@gmail.com"
+photo: portrait2.jpg
+template: cv.html
+lang: en
+
+sections:
+  - summary-director-saas
+  - core-competencies
+  - experience:
+      include:
+        - cloudfactory-head-of-consulting
+        - sevdesk-director
+        - wuerth-head-of-dev
+        - durstexpress-lead-pm
+        - adesso-head-cc
+  - education:
+      include: [phd, diplom]
+  - skills:
+      include: [leadership, engineering-management, agile-methods, technologies-cloud, technologies-backend, languages]
+  - certifications
