@@ -9,7 +9,8 @@ Dates without a tracked application date use the status/file date as approximati
 
 | Date       | Company                                  | Role                                                | Salary ask | Status                                                 |
 | ---------- | ---------------------------------------- | --------------------------------------------------- | ---------- | ------------------------------------------------------ |
-| 2026-09-28 | Raisin                                   | Director Engineering – Investment & Pension         | €155k      | Applied                                                |
+| 2026-10-04 | Moss                                     | Head of Engineering                                 |            | Rejected (referral by Sven Zehl; torpedoed by Max Tillich) |
+| 2026-09-28 | Raisin                                   | Director Engineering – Investment & Pension         | €155k      | Rejected                                               |
 | 2026-09-28 | Redcare Pharmacy                         | Director Engineering – Adtech & Marketplace         | €148k      | Applied                                                |
 | 2026-09-18 | Burmester Audiosysteme GmbH              | Head of R&D                                         |            | Rejected                                               |
 | 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer                            |            | Applied (recruiter search, company withheld)           |
