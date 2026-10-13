@@ -13,13 +13,13 @@ Dates without a tracked application date use the status/file date as approximati
 | 2026-10-04 | Confidential (Berlin fintech, SMB payments) | Chief Technology Officer                         | €160k      | Applied (via TechSearch)                               |
 | 2026-10-04 | idealo                                   | Director of Engineering – Catalogue                 | €145k      | Rejected                                               |
 | 2026-09-28 | Raisin                                   | Director Engineering – Investment & Pension         | €155k      | Rejected                                               |
-| 2026-09-28 | Redcare Pharmacy                         | Director Engineering – Adtech & Marketplace         | €148k      | Applied                                                |
+| 2026-09-28 | Redcare Pharmacy                         | Director Engineering – Adtech & Marketplace         | €148k      | Rejected                                               |
 | 2026-09-18 | Burmester Audiosysteme GmbH              | Head of R&D                                         |            | Rejected                                               |
 | 2026-08-26 | Confidential (Berlin, European tech co.) | Chief Technology Officer                            |            | Applied (recruiter search, company withheld)           |
 | 2026-08-18 | CKM Group (GreenMedical)                 | Head of Product & Engineering                       |            | Rejected, position closed                              |
 | 2026-07-20 | Alpega Group                             | Vice President Software Engineering (Group)         |            | Applied                                                |
 | 2026-06-20 | Green Fusion                             | VP Engineering                                      |            | Applied                                                |
-| 2026-06-01 | DKB                                      | Chapter Lead Engineering Management                 |            | Applied                                                |
+| 2026-06-01 | DKB                                      | Chapter Lead Engineering Management                 |            | Rejected                                               |
 | 2026-04-20 | MD-IT GmbH                               | Head of Engineering                                 |            | Rejected (other panel members vetoed strong candidate) |
 | 2026-04-20 | ETERNO                                   | CTO                                                 |            | Rejected                                               |
 | 2026-04-20 | MAM Gruppe                               | Director of Software Engineering                    |            | Applied                                                |
